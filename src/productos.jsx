@@ -30,42 +30,42 @@ const Productos = () => {
     {
       id: 2,
       nombre: 'FORLI',
-      imagen: '/src/assets/forli.jpg',
+      imagen: '/assets/forli.jpg',
       subcategorias: [
         {
           id: 1,
           nombre: 'Gabinetes Estancos',
-          imagen: '/src/assets/gab-estanco.jpg', // Ruta de la imagen de la subcategoría A
+          imagen: '/assets/gab-estanco.jpg', // Ruta de la imagen de la subcategoría A
           enlace: 'https://www.forli.com.ar/gabinetes-estancos/',
         },
         {
           id: 2,
           nombre: 'Gabinetes Especiales',
-          imagen: '/src/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
+          imagen: '/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
           enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
         },
         {
             id: 3,
             nombre: 'Gabinetes Modulares F50M',
-            imagen: '/src/assets/gab-modular.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: '/assets/gab-modular.jpg', // Ruta de la imagen de la subcategoría B
             enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
           },
           {
             id: 4,
             nombre: 'Cajas Plasticas',
-            imagen: '/src/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: '/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
             enlace: 'https://www.forli.com.ar/cajas-plasticas/',
           },
           {
             id: 5,
             nombre: 'Cajas de Empotrar y Derivación',
-            imagen: '/src/assets/caja-empotrar.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: '/assets/caja-empotrar.jpg', // Ruta de la imagen de la subcategoría B
             enlace: 'https://www.forli.com.ar/cajas-de-empotrar-y-derivacion/',
           },
           {
             id: 6,
             nombre: 'Accesorios',
-            imagen: '/src/assets/accesorios.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: '/assets/accesorios.jpg', // Ruta de la imagen de la subcategoría B
             enlace: 'https://www.forli.com.ar/accesorios/',
           }
       ],
