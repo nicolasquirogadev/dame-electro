@@ -1,6 +1,12 @@
 import React, { useState } from 'react';
 import './productos.css'; // Archivo de estilos para este componente
 import CatalogoProveedor from './CatalogoProveedor'; // Importar el componente reutilizable
+import forliImg from './assets/forli.jpg';
+import gabEstancoImg from './assets/gab-estanco.jpg';
+import gabEspecialImg from './assets/gab-especial.jpg';
+import gabModularImg from './assets/gab-modular.jpg';
+import cajaEmpotrarImg from './assets/caja-empotrar.jpg';
+import accesoriosImg from './assets/accesorios.jpg';
 
 const Productos = () => {
   // Estado para almacenar el proveedor seleccionado
@@ -30,42 +36,36 @@ const Productos = () => {
     {
       id: 2,
       nombre: 'FORLI',
-      imagen: '/assets/forli.jpg',
+      imagen: forliImg,
       subcategorias: [
         {
           id: 1,
           nombre: 'Gabinetes Estancos',
-          imagen: '/assets/gab-estanco.jpg', // Ruta de la imagen de la subcategoría A
+          imagen: gabEstancoImg, 
           enlace: 'https://www.forli.com.ar/gabinetes-estancos/',
         },
         {
           id: 2,
           nombre: 'Gabinetes Especiales',
-          imagen: '/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
+          imagen: gabEspecialImg, 
           enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
         },
         {
             id: 3,
             nombre: 'Gabinetes Modulares F50M',
-            imagen: '/assets/gab-modular.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: gabModularImg, 
             enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
           },
           {
             id: 4,
-            nombre: 'Cajas Plasticas',
-            imagen: '/assets/gab-especial.jpg', // Ruta de la imagen de la subcategoría B
-            enlace: 'https://www.forli.com.ar/cajas-plasticas/',
-          },
-          {
-            id: 5,
             nombre: 'Cajas de Empotrar y Derivación',
-            imagen: '/assets/caja-empotrar.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: cajaEmpotrarImg,
             enlace: 'https://www.forli.com.ar/cajas-de-empotrar-y-derivacion/',
           },
           {
-            id: 6,
+            id: 5,
             nombre: 'Accesorios',
-            imagen: '/assets/accesorios.jpg', // Ruta de la imagen de la subcategoría B
+            imagen: accesoriosImg, 
             enlace: 'https://www.forli.com.ar/accesorios/',
           }
       ],
@@ -78,13 +78,13 @@ const Productos = () => {
         {
           id: 1,
           nombre: 'Subcategoría X',
-          imagen: 'ruta/a/subcategoriaX.jpg', // Ruta de la imagen de la subcategoría X
+          imagen: 'ruta/a/subcategoriaX.jpg',
           enlace: 'https://www.proveedor3.com/catalogoX',
         },
         {
           id: 2,
           nombre: 'Subcategoría Y',
-          imagen: 'ruta/a/subcategoriaY.jpg', // Ruta de la imagen de la subcategoría Y
+          imagen: 'ruta/a/subcategoriaY.jpg', 
           enlace: 'https://www.proveedor3.com/catalogoY',
         },
       ],

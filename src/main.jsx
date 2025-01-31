@@ -8,6 +8,7 @@ import Productos from './productos';
 import Servicios from './servicios';
 import Contacto from './contacto';
 import Nosotros from './nosotros';
+import dameLogo from './assets/dame.logo.jpg';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -54,7 +55,7 @@ const App = () => {
               handleNavClick('hero');
             }}
           >
-            <img src="./assets/dame.logo.jpg" alt="D.A.M.E. logo" />
+            <img src={dameLogo} alt="D.A.M.E. logo" />
           </a>
         </div>
 
