@@ -1,0 +1,117 @@
+/* Media Query para móviles */
+@media (max-width: 768px) {
+    nav {
+        padding: .5rem;
+        display: flex;
+        flex-direction: column;
+    }
+    /* Oculta el menú de navegación en móviles */
+    .nav-wrapper {
+      display: none;
+      flex-direction: column;
+      position: relative;
+      background-color: #001f3f;
+      width: 100%;
+      padding: 1rem;
+      gap: 1rem;
+      margin: 2rem auto;
+      transition: all .3s ease;
+      text-align: center;
+    }
+  
+    /* Muestra el menú cuando está activo */
+    .nav-wrapper.active {
+      display: flex;
+      transition: all .3s ease;
+
+    }
+  
+    /* Muestra el botón de hamburguesa en móviles */
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    /* Animación para el botón de hamburguesa */
+    .hamburger-menu.active .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .hamburger-menu.active .hamburger-line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger-menu.active .hamburger-line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  
+    .hamburger-line {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+   
+
+    /* Estilos para slider */
+     #root .swiper {
+        height: 70dvh;
+    }
+    .swiper-slide .slide-content {
+        position: relative;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 3rem 2rem;
+      }
+      .swiper-slide .slide-content h1 {
+        font-size: 2.2rem;
+        margin: 0;
+      }
+      
+      .swiper-slide .slide-content p {
+        font-size: 1rem;
+        margin: 0; 
+      }
+      
+      .swiper-slide .slide-content .cta-button {
+        padding: .6rem;
+        font-size: .9rem;
+        width: 70%;
+        margin: 0;
+        
+      }
+
+      /* Estilos para seccion productos */
+      #productos {
+        
+        h1 {
+            font-size: 3rem;
+        }
+        .proveedores-grid {
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            width: 80dvw;
+        }
+        
+      }
+      /* Estilos para catalogo de proveedor */
+      #catalogo-proveedor {
+        .subcategorias-grid {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+      }
+
+      /* Estilos para seccion de contactos */
+      #contacto {
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            margin: 1rem 2rem;
+        }
+        .cont-wrapper {
+            display: flex;
+            flex-direction: column;
+            margin: 3rem auto;
+        }
+        .contact-link {
+            height: 6rem;
+        }
+      }
+  }

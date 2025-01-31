@@ -1,0 +1,53 @@
+#contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.cont-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.contact-link {
+    height: 8rem;
+    background-color: rgba(4, 16, 70, 0.493);
+    border-radius: 14px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: all .3s ease;
+    gap: 1rem;
+    i {
+        font-size: 2rem;
+    }
+}
+
+.contact-link:hover {
+    background-color: rgba(22, 34, 88, 0.548);
+    cursor: pointer;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    p{
+        font-size: 1rem;
+    }
+}
+
+.contact-title {
+    font-size: 1.8rem;
+    margin: 0 auto;
+}
