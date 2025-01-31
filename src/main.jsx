@@ -54,7 +54,7 @@ const App = () => {
               handleNavClick('hero');
             }}
           >
-            <img src="/src/assets/dame.logo.jpg" alt="D.A.M.E. logo" />
+            <img src="./assets/dame.logo.jpg" alt="D.A.M.E. logo" />
           </a>
         </div>
 
