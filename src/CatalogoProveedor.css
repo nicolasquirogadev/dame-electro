@@ -1,13 +1,13 @@
 /* Estilos para la sección del catálogo */
 .catalogo-proveedor-section {
   position: relative;
-  width: 90dvw; /* Usa el 100% del ancho de la ventana */
+  width: 90dvw; 
   display: flex;
   flex-direction: column;
   margin: 1rem auto;
-  gap: 1.5rem; /* Espacio entre los elementos del grid */
-  align-items: center; /* Centra los elementos verticalmente */
-  justify-items: center; /* Centra los elementos horizontalmente */
+  gap: 1.5rem; 
+  align-items: center; 
+  justify-items: center; 
   text-align: center;
   color: white;
 }
@@ -15,10 +15,10 @@
 
 .subcategorias-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Grid responsivo */
-  gap: 1.5rem; /* Espacio entre las tarjetas */
-  width: 100%; /* Ocupa el 100% del ancho disponible */
-  padding: 1rem; /* Espaciado interno */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1.5rem; 
+  width: 90%; 
+  padding: 1rem; 
   margin: 0 1rem;
 }
 
@@ -37,6 +37,7 @@
 .subcategoria-link:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .subcategoria-imagen {
@@ -45,6 +46,7 @@
   border-radius: 10px;
   margin-bottom: 0.5rem;
   object-fit: cover;
+  object-position: center;
   aspect-ratio: 3 / 4;
 }
 

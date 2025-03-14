@@ -1,0 +1,84 @@
+.productos-subcategoria-section {
+    padding: 2rem;
+    text-align: center;
+    min-width: 80dvw;
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    align-content: center;
+  }
+  
+  .producto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .producto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  .producto-imagen {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+  
+  .producto-nombre {
+    font-size: 1rem;
+    margin: 0;
+    color: #0056b3;
+  }
+  
+  .producto-detalle-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .producto-detalle-card {
+    background-color: #067dfd7c;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .volver-btn {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .volver-btn:hover {
+    background-color: #0056b3;
+  }
