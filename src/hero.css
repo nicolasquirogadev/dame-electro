@@ -2,49 +2,12 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 100dvh;
-    overflow: hidden;
-    display: flex;
     align-items: center;
     text-align: center;
     color: white;
+    background: #002850;
   }
   
-  /* Fondo con degradado eléctrico */
-  section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #001f3f, #003366, #0074D9, #7FDBFF);
-    z-index: -3;
-  }
-  
-  /* Destellos de luz (animación) */
- section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 20%);
-    background-size: 20px 20px;
-    animation: sparkle 17s infinite linear;
-    z-index: -3;
-  }
-  
-  /* Animación para los destellos */
-  @keyframes sparkle {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
-  }
   
   /* Estilos para el carousel */
   .swiper-slide {
@@ -52,7 +15,7 @@ section {
     text-align: center;
     gap: 3rem;
   }
-  .swiper {
+  .swiper1 {
     height: 50dvh;
     z-index: 1;
   }
@@ -128,4 +91,104 @@ section {
   .cta-button:hover {
     background-color: #005bb5;
   }
-  
+
+  /* Estilos para banda de graficos */
+  .banda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #003366ab;
+    padding: 1rem;
+  }
+
+  .banda-title {
+    font-size: 2rem;
+    margin: 2rem auto;
+  }
+
+  .banda-content {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    text-align: center;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .banda-item{
+    i{
+      font-size: 2.5rem;
+    }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Estilos para el carousel de logos */
+
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: #8191a1a9;
+    white-space: nowrap;
+  }
+
+  .logos-slide img {
+    height: 50px;
+    margin: 0 20px;
+  }
+
+  .logos-slide {
+    display: inline-block;
+    animation: 30s slide infinite linear;
+  }
+
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+  }
+
+  @keyframes slide {
+
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+    
+  }
+
+  /* Estilos para Efecto Parallax */
+  .parallax1 {
+    background: url('assets/inner-local-vert.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .parallax2 {
+    background: url('assets/jadever-vert.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .parallax3 {
+    background: url('assets/rollos-vert.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .parallax-inner{
+    padding: 10% 0;
+    background: rgba(0, 0, 0, 0.397);
+  }
+
+  section > h2, section > p {
+    background: #00162c00;
+    padding: 1rem;
+    margin: 0 3rem;
+    border-radius: 20px;
+  }

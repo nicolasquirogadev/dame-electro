@@ -11,7 +11,7 @@ function Contacto() {
 
             <div className="contact-link">
                 <div className="contact-icon">
-                    <i class="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone"></i>
                 </div>
                 <div className="contact-content">
                     <h4 className='contact-title'>Telefono:</h4>
@@ -21,7 +21,7 @@ function Contacto() {
 
             <div className="contact-link">
                 <div className="contact-icon">
-                <i class="fa-solid fa-envelope"></i>
+                <i className="fa-solid fa-envelope"></i>
                 </div>
                 <div className="contact-content">
                     <h4 className='contact-title'>Escribinos por email:</h4>
@@ -31,7 +31,7 @@ function Contacto() {
 
             <div className="contact-link">
                 <div className="contact-icon">
-                <i class="fa-brands fa-whatsapp"></i>
+                <i className="fa-brands fa-whatsapp"></i>
                 </div>
                 <div className="contact-content">
                     <h4 className='contact-title'>WhatsApp:</h4>
@@ -41,7 +41,7 @@ function Contacto() {
 
             <div className="contact-link">
                 <div className="contact-icon">
-                    <i class="fa-regular fa-clock"></i>
+                    <i className="fa-regular fa-clock"></i>
                 </div>
                 <div className="contact-content">
                     <h4 className='contact-title'>Horario de atencion:</h4>
