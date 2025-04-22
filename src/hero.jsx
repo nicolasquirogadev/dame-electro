@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import './index.css';
 import './mediaqueries.css';
 import './hero.css';
+import wppImg from './assets/WhatsAppButtonGreenLarge.svg';
 
 function Hero() {
 
@@ -96,25 +97,25 @@ function Hero() {
     </div>
    </div>
    
- <section className="parallax1">
+ <div className="parallax1">
         <div className="parallax-inner">
           <h1>Scroll Down</h1>
         </div>
-      </section>
+      </div>
       <h2>Parallax Effect</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-      <section className="parallax2">
+      <div className="parallax2">
         <div className="parallax-inner">
           <h1>Parallax Effect</h1>
         </div>
-      </section>
+      </div>
       <h2>Parallax Effect</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-      <section className="parallax3">
+      <div className="parallax3">
         <div className="parallax-inner">
           <h1>Parallax Effect</h1>
         </div>
-      </section>
+      </div>
       <h2>Parallax Effect</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
 
@@ -183,6 +184,12 @@ function Hero() {
       <img src="https://viyilant.com.ar/wp-content/uploads/2021/03/cropped-cropped-cropped-logo-viyi-pleno-RGB.png" alt="" />
       <img src="https://samet.com.ar/assets/img/logo.png" alt="" />
     </div>
+   </div>
+
+   <div className="wpp-button">
+   <a aria-label="Chat on WhatsApp" href="https://wa.me/5491130733557" target="_blank">
+   <img alt="Chat on WhatsApp" src= {wppImg} />
+   </a>
    </div>
 
     </section>
