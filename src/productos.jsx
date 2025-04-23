@@ -13,523 +13,187 @@ import accesoriosImg from './assets/accesorios.jpg';
 
 //imagenes categorias Macroled
 import macroledLogo from './assets/Macroled.logo.png';
-import lamparasImg from './assets/lamparas.jpeg';
+import iluminacionImg from './assets/lamparas.jpeg';
 import artefactosImg from './assets/artefactos.jpeg';
 import metalicosImg from './assets/metalicos.jpeg';
 import pcImg from './assets/pc.jpeg';
 import interruptoresImg from './assets/interruptores.jpeg'
-import smartImg from './assets/smart.jpeg'
+import smartHomeImg from './assets/smart.jpeg'
 import sensoresImg from './assets/sensores.jpeg'
 import interiorImg from './assets/interior.jpeg'
 import emergenciaImg from './assets/emergencia.jpeg'
 import exteriorImg from './assets/exterior.jpeg'
-import inteckImg from './assets/inteck.jpeg'
+import electricidadImg from './assets/inteck.jpeg'
 import solarImg from './assets/solar.jpeg'
 import mesaImg from './assets/mesa.jpeg'
 import altapotImg from './assets/altapot.jpeg'
 import tirasImg from './assets/tiras.jpeg'
 
 
-const Productos = () => {
-  // Estado para almacenar el proveedor seleccionado
-  const [proveedorSeleccionado, setProveedorSeleccionado] = useState(null);
-  const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
-
   // Datos de los proveedores (puedes cambiarlos o cargarlos dinámicamente)
-  const proveedores = [
-    {
-      id: 1,
-      nombre: 'Macroled',
-      imagen: macroledLogo,
-      subcategorias: [
+  const Productos = () => {
+    // Estados para manejar la navegación
+    const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
+    const [proveedorSeleccionado, setProveedorSeleccionado] = useState(null);
+  
+    // Definimos las categorías principales
+    const categorias = [
+      {
+        id: 1,
+        nombre: 'Iluminación',
+        imagen: iluminacionImg,
+      },
+      {
+        id: 2,
+        nombre: 'Electricidad',
+        imagen: electricidadImg,
+      },
+      {
+        id: 3,
+        nombre: 'Smart Home',
+        imagen: smartHomeImg,
+      },
+      // Otras categorías según necesites
+    ];
+  
+    // Datos de los proveedores organizados por categorías
+    const proveedoresPorCategoria = {
+      // Iluminación
+      1: [
         {
           id: 1,
-          nombre: 'Lámparas',
-          imagen: lamparasImg, 
+          nombre: 'Macroled',
+          imagen: macroledLogo,
           productos: [
+            // Lámparas
             {
               id: 1,
               nombre: 'BT-55-7',
               imagen: 'BT-55-7',
-              detalles: "Lámpara LED de alta eficiencia energética, ideal para uso residencial y comercial",
-              especificaciones: 
-                {
-                  potencia: '6.5W',
-                  eficiencia: 'A++',
-                  conector: 'E27',
-                  corriente: '55mA',
-                  equivalencia: "55W", // Equivalencia en lámparas incandescentes
-                  flujoLuminoso: "600 lm", 
-                  temperaturaColor: "3000K",
-                  indiceReproduccionCromatica: ">80 CRI", 
-                  anguloApertura: "120°", 
-                  vidaUtil: "15.000 horas", 
-                  eficienciaEnergetica: "A++", 
-                  tension: "100-240V", 
-                  frecuencia: "50/60Hz", 
-                  factorPotencia: ">0.5", 
-                  proteccion: "IP20", 
-                  material: "Plástico ABS", 
-                  dimensiones: {
-                    diametro: "55mm",
-                    altura: "110mm"
-                  },
-                  certificaciones: ["CE", "RoHS"], // Certificaciones del producto
-                },
-              enlaceFichaTecnica: "https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf", // Enlace al PDF 
+              detalles: "Lámpara LED de alta eficiencia energética...",
+              especificaciones: {
+                // ... especificaciones del producto
+              },
+              enlaceFichaTecnica: "..."
             },
-            {
-              id: 2,
-              nombre: 'BT-60-10',
-              imagen: 'BT-60-10',
-              detalles: 'Lámpara LED de alta eficiencia energética, ideal para uso residencial y comercial',
-              especificaciones: {
-                potencia: '9.5W',
-                eficiencia: 'A+',
-                conector: 'E27',
-                corriente: '77mA',
-                equivalencia: '75W',
-                flujoLuminoso: '950 lm',
-                temperaturaColor: '3000K',
-                indiceReproduccionCromatica: '>80 CRI',
-                anguloApertura: '220°',
-                vidaUtil: '15.000 horas',
-                eficienciaEnergetica: 'A+',
-                tension: '220-240V',
-                frecuencia: '50/60Hz',
-                factorPotencia: '>0.5',
-                proteccion: 'IP20',
-                material: 'PC y Aluminio',
-                dimensiones: {
-                  diametro: '60mm',
-                  altura: '113mm',
-                },
-                peso: '30g',
-                certificaciones: ['CE', 'RoHS'],
-              },
-              enlaceFichaTecnica: 'https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf',
-            },
-            {
-              id: 3,
-              nombre: 'BT-60-12',
-              imagen: 'BT-60-12',
-              detalles: 'Lámpara LED de alta eficiencia energética, ideal para uso residencial y comercial',
-              especificaciones: {
-                potencia: '11.5W',
-                eficiencia: 'A+',
-                conector: 'E27',
-                corriente: '93mA',
-                equivalencia: '85W',
-                flujoLuminoso: '1100 lm',
-                temperaturaColor: '3000K',
-                indiceReproduccionCromatica: '>80 CRI',
-                anguloApertura: '220°',
-                vidaUtil: '15.000 horas',
-                eficienciaEnergetica: 'A+',
-                tension: '220-240V',
-                frecuencia: '50/60Hz',
-                factorPotencia: '>0.5',
-                proteccion: 'IP20',
-                material: 'PC y Aluminio',
-                dimensiones: {
-                  diametro: '60mm',
-                  altura: '118mm',
-                },
-                peso: '36g',
-                certificaciones: ['CE', 'RoHS'],
-              },
-              enlaceFichaTecnica: 'https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf',
-            },
-            {
-              id: 4,
-              nombre: 'BT-60-15',
-              imagen: 'BT-60-15',
-              detalles: 'Lámpara LED de alta eficiencia energética, ideal para uso residencial y comercial',
-              especificaciones: {
-                potencia: '14.5W',
-                eficiencia: 'A+',
-                conector: 'E27',
-                corriente: '117mA',
-                equivalencia: '100W',
-                flujoLuminoso: '1400 lm',
-                temperaturaColor: '3000K',
-                indiceReproduccionCromatica: '>80 CRI',
-                anguloApertura: '220°',
-                vidaUtil: '15.000 horas',
-                eficienciaEnergetica: 'A+',
-                tension: '220-240V',
-                frecuencia: '50/60Hz',
-                factorPotencia: '>0.5',
-                proteccion: 'IP20',
-                material: 'PC y Aluminio',
-                dimensiones: {
-                  diametro: '60mm',
-                  altura: '118mm',
-                },
-                peso: '43g',
-                certificaciones: ['CE', 'RoHS'],
-              },
-              enlaceFichaTecnica: 'https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf',
-            },
-            {
-              id: 5,
-              nombre: 'BTF-1.8-14',
-              imagen: 'BTF-1.8-14',
-              detalles: "Lámpara LED especial para refrigeradores y pequeños espacios.",
-              especificaciones: {
-                  potencia: '1.8W',
-                  eficiencia: 'A+',
-                  conector: 'E14',
-                  corriente: '13mA',
-                  equivalencia: '15W',
-                  flujoLuminoso: '140 lm',
-                  temperaturaColor: '3000K',
-                  indiceReproduccionCromatica: '>80 CRI',
-                  anguloApertura: '360°',
-                  vidaUtil: '15.000 horas',
-                  eficienciaEnergetica: 'A+',
-                  tension: '180-240V',
-                  frecuencia: '50/60Hz',
-                  factorPotencia: '>0.5',
-                  proteccion: 'IP20',
-                  material: 'PC y Aluminio',
-                  dimensiones: {
-                      diametro: '18mm',
-                      altura: '51mm',
-                  },
-                  peso: '10.2g',
-                  certificaciones: ['CE', 'RoHS'],
-              },
-              enlaceFichaTecnica: "https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf#page=2"
-          },
-          {
-              id: 6,
-              nombre: 'BTF-4-14',
-              imagen: 'BTF-4-14',
-              detalles: "Lámpara LED especial para refrigeradores y pequeños espacios.",
-              especificaciones: {
-                  potencia: '3W',
-                  eficiencia: 'A+',
-                  conector: 'E14',
-                  corriente: '30mA',
-                  equivalencia: '40W',
-                  flujoLuminoso: '270 lm',
-                  temperaturaColor: '3000K',
-                  indiceReproduccionCromatica: '>80 CRI',
-                  anguloApertura: '360°',
-                  vidaUtil: '15.000 horas',
-                  eficienciaEnergetica: 'A+',
-                  tension: '180-240V',
-                  frecuencia: '50/60Hz',
-                  factorPotencia: '>0.5',
-                  proteccion: 'IP20',
-                  material: 'PC y Aluminio',
-                  dimensiones: {
-                      diametro: '18mm',
-                      altura: '51mm',
-                  },
-                  peso: '10.2g',
-                  certificaciones: ['CE', 'RoHS'],
-              },
-              enlaceFichaTecnica: "https://cdn.prod.website-files.com/65f1fdd7248b6709fdebe904/678e6b1bd61c9aa89e6f8fdc_bulbos.pdf#page=2"
-          },
-          ],
+            // Más productos de iluminación de Macroled
+          ]
         },
+        // Otros proveedores de iluminación
+      ],
+      
+      // Electricidad
+      2: [
         {
           id: 2,
-          nombre: 'Artefactos Lámparas',
-          imagen: artefactosImg, 
+          nombre: 'FORLI',
+          imagen: forliImg,
           productos: [
+            // Gabinetes
             {
               id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
+              nombre: 'Gabinetes Estancos',
+              imagen: gabEstancoImg,
+              detalles: "Gabinetes estancos para instalaciones eléctricas...",
+              enlace: 'https://www.forli.com.ar/gabinetes-estancos/'
+            },
+            // Más productos eléctricos de FORLI
+          ]
         },
-        {
-          id: 3,
-          nombre: 'Artefactos Metálicos',
-          imagen: metalicosImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Metal Slug 2',
-              detalles: 'Es un juegazo por eso lo pongo',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 4,
-          nombre: 'Artefactos PC',
-          imagen: pcImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 5,
-          nombre: 'Interruptores y tomas',
-          imagen: interruptoresImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 6,
-          nombre: 'Smart',
-          imagen: smartImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 7,
-          nombre: 'Sensores y Fotocélulas',
-          imagen: sensoresImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 8,
-          nombre: 'Artefactos Integrados Interior',
-          imagen: interiorImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 9,
-          nombre: 'Luces de Emergencia',
-          imagen: emergenciaImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 10,
-          nombre: 'Artefactos Exterior',
-          imagen: exteriorImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 11,
-          nombre: 'INTECK',
-          imagen: inteckImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 12,
-          nombre: 'Solar',
-          imagen: solarImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 13,
-          nombre: 'Lámparas de Mesa y Pie',
-          imagen: mesaImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 14,
-          nombre: 'Alta Potencia',
-          imagen: altapotImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
-        {
-          id: 15,
-          nombre: 'Tiras y Fuentes',
-          imagen: tirasImg, 
-          productos: [
-            {
-              id: 1,
-              nombre: 'Producto 1',
-              detalles: 'Detalles del producto 1',
-              imagen: '',
-            }
-          ],
-        },
+        // Otros proveedores de electricidad
       ],
-    },
-    {
-      id: 2,
-      nombre: 'FORLI',
-      imagen: forliImg,
-      subcategorias: [
-        {
-          id: 1,
-          nombre: 'Gabinetes Estancos',
-          imagen: gabEstancoImg, 
-          enlace: 'https://www.forli.com.ar/gabinetes-estancos/',
-        },
-        {
-          id: 2,
-          nombre: 'Gabinetes Especiales',
-          imagen: gabEspecialImg, 
-          enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
-        },
-        {
-            id: 3,
-            nombre: 'Gabinetes Modulares F50M',
-            imagen: gabModularImg, 
-            enlace: 'https://www.forli.com.ar/gabinetes-especiales/',
-          },
-          {
-            id: 4,
-            nombre: 'Cajas de Empotrar y Derivación',
-            imagen: cajaEmpotrarImg,
-            enlace: 'https://www.forli.com.ar/cajas-de-empotrar-y-derivacion/',
-          },
-          {
-            id: 5,
-            nombre: 'Accesorios',
-            imagen: accesoriosImg, 
-            enlace: 'https://www.forli.com.ar/accesorios/',
-          }
-      ],
-    },
-    {
-      id: 3,
-      nombre: 'Proveedor 3',
-      imagen: 'ruta/a/imagen3.jpg',
-      subcategorias: [
-        {
-          id: 1,
-          nombre: 'Subcategoría X',
-          imagen: 'ruta/a/subcategoriaX.jpg',
-          enlace: 'https://www.proveedor3.com/catalogoX',
-        },
-        {
-          id: 2,
-          nombre: 'Subcategoría Y',
-          imagen: 'ruta/a/subcategoriaY.jpg', 
-          enlace: 'https://www.proveedor3.com/catalogoY',
-        },
-      ],
-    },
-  ];
-
-  // Función para manejar el clic en un proveedor
-  const handleProveedorClick = (proveedor) => {
-    setProveedorSeleccionado(proveedor);
-  };
-
-  // Función para manejar el clic en una subcategoría
-  const handleSubcategoriaClick = (subcategoria) => {
-    setSubcategoriaSeleccionada(subcategoria);
-  };
-
-  // Función para volver a la vista de todos los proveedores
-  const handleVolver = () => {
-    setProveedorSeleccionado(null);
-  };
-
-  return (
-    <section id="productos" className="productos-section">
-      <h1>Nuestros Proveedores</h1>
-      {subcategoriaSeleccionada ? (
-        // Muestra los productos de la subcategoría seleccionada
-        <ProductosSubcategoria
-          subcategoria={subcategoriaSeleccionada}
-          onVolver={() => setSubcategoriaSeleccionada(null)}
-        />
-      ) : proveedorSeleccionado ? (
-        // Muestra el catálogo del proveedor seleccionado
-        <CatalogoProveedor
-          nombreProveedor={proveedorSeleccionado.nombre}
-          subcategorias={proveedorSeleccionado.subcategorias}
-          onSubcategoriaClick={handleSubcategoriaClick} // Pasa la función para manejar el clic en una subcategoría
-          onVolver={handleVolver}
-        />
-      ) : (
-        // Muestra la lista de proveedores
-        <div className="proveedores-grid">
-          {proveedores.map((proveedor) => (
-            <div
-              key={proveedor.id}
-              className="proveedor-link"
-              onClick={() => setProveedorSeleccionado(proveedor)}
-            >
-              <img
-                src={proveedor.imagen}
-                alt={proveedor.nombre}
-                className="proveedor-imagen"
-              />
-              <p className="proveedor-nombre">{proveedor.nombre}</p>
+      
+      // Smart Home
+      3: [
+        // Proveedores de Smart Home
+      ]
+    };
+  
+    // Función para manejar el clic en una categoría
+    const handleCategoriaClick = (categoria) => {
+      setCategoriaSeleccionada(categoria);
+    };
+  
+    // Función para manejar el clic en un proveedor
+    const handleProveedorClick = (proveedor) => {
+      setProveedorSeleccionado(proveedor);
+    };
+  
+    // Función para volver atrás
+    const handleVolver = () => {
+      if (proveedorSeleccionado) {
+        setProveedorSeleccionado(null);
+      } else {
+        setCategoriaSeleccionada(null);
+      }
+    };
+  
+    return (
+      <section id="productos" className="productos-section">
+        <h1>Nuestros Productos</h1>
+        
+        {proveedorSeleccionado ? (
+          // Vista de productos del proveedor en la categoría seleccionada
+          <div className="productos-container">
+            <button onClick={handleVolver} className="btn-volver">
+              Volver a proveedores
+            </button>
+            <h2>{proveedorSeleccionado.nombre} - {categoriaSeleccionada.nombre}</h2>
+            
+            <div className="productos-grid">
+              {proveedorSeleccionado.productos
+                .filter(producto => 
+                  // Aquí podrías añadir lógica para filtrar por categoría si es necesario
+                  true
+                )
+                .map(producto => (
+                  <div key={producto.id} className="producto-card">
+                    <img src={producto.imagen} alt={producto.nombre} />
+                    <h3>{producto.nombre}</h3>
+                    <p>{producto.detalles}</p>
+                    {/* Más detalles del producto */}
+                  </div>
+                ))}
             </div>
-          ))}
-        </div>
-      )}
-    </section>
-  );
-};
-
-export default Productos;
+          </div>
+        ) : categoriaSeleccionada ? (
+          // Vista de proveedores para la categoría seleccionada
+          <div className="proveedores-container">
+            <button onClick={handleVolver} className="btn-volver">
+              Volver a categorías
+            </button>
+            <h2>Proveedores de {categoriaSeleccionada.nombre}</h2>
+            
+            <div className="proveedores-grid">
+              {proveedoresPorCategoria[categoriaSeleccionada.id]?.map(proveedor => (
+                <div 
+                  key={proveedor.id} 
+                  className="proveedor-card"
+                  onClick={() => handleProveedorClick(proveedor)}
+                >
+                  <img src={proveedor.imagen} alt={proveedor.nombre} />
+                  <h3>{proveedor.nombre}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          // Vista inicial de categorías
+          <div className="categorias-grid">
+            {categorias.map(categoria => (
+              <div 
+                key={categoria.id} 
+                className="categoria-card"
+                onClick={() => handleCategoriaClick(categoria)}
+              >
+                <img src={categoria.imagen} alt={categoria.nombre} />
+                <h3>{categoria.nombre}</h3>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+    );
+  };
+  
+  export default Productos;

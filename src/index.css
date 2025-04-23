@@ -24,6 +24,10 @@ h1, h2, h3, h4 {
   box-sizing: border-box;
 }
 
+body {
+  background-color: #001a33;
+}
+
 
 .logo-container {
   width: 200px;
