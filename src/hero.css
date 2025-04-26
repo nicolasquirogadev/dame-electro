@@ -1,6 +1,7 @@
 /* Contenedor de la Hero Section */
 section {
     position: relative;
+    display: block;
     width: 100%;
     align-items: center;
     text-align: center;

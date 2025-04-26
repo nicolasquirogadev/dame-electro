@@ -1,0 +1,10 @@
+@import './hero.css';
+@import './index.css';
+
+#nosotros {
+    p{
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    
+}

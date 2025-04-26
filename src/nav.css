@@ -2,11 +2,14 @@
 nav {
     position: sticky;
     display: flex;
+    top: 0;
+    margin: 0 auto;
     flex-direction: row;
     padding: 1rem;
     background-color: #001f3f;
     justify-content: space-between;
     align-items: center;
+    z-index: 4;
   }
   .top-wrapper {
     display: flex;
