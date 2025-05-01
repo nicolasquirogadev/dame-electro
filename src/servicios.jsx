@@ -1,3 +1,5 @@
+import Footer from './Footer'
+
 
 function Servicios() {
 
@@ -5,6 +7,8 @@ function Servicios() {
         <>
         <h1>seccion de Servicios</h1>
         
+        < Footer />
+
         </>
     )
 }

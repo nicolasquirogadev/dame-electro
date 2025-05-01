@@ -1,4 +1,5 @@
 import './nosotros.css';
+import Footer from './Footer'
 
 function Nosotros() {
 
@@ -33,6 +34,8 @@ function Nosotros() {
         
         <p>Si buscas un aliado estratégico no dudes en contactarnos  y conocernos.</p>
         </section>
+
+        < Footer />
 
         
        </>

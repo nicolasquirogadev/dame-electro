@@ -1,4 +1,5 @@
 // import Swiper core and required modules
+import Footer from './Footer'
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -190,6 +191,8 @@ function Hero() {
 
 
     </section>
+
+    < Footer />
 
     </>
     )

@@ -122,6 +122,8 @@ const App = () => {
       </nav>
 
       {renderSection()}
+
+
          <div className="wpp-button">
          <a aria-label="Chat on WhatsApp" href="https://wa.me/5491130733557" target="_blank">
          <img alt="Chat on WhatsApp" src= {wppImg} />

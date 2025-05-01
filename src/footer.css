@@ -1,0 +1,80 @@
+/* Estilos para el footer */
+.site-footer {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+    color: #333;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  .map-container {
+    flex: 1 1 60%;
+    min-width: 300px;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-info {
+    flex: 1 1 35%;
+    min-width: 250px;
+    padding: 0 1rem;
+    h3 {
+        color: #002850;
+        font-size: 1.3rem;
+        margin-bottom: .3rem;
+    }
+  }
+  
+  .copyright {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: row;
+    
+
+    a {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: #002850;
+        transition: ease .2s all ;
+        margin: auto 0;
+        display: flex;
+        align-items: center;
+    }
+    i {
+        text-decoration: none;
+        font-size: 3rem;
+        margin-right: .3rem;
+        color: #002850;
+        transition: ease .2s all ;
+    }
+    a:hover {
+        font-size: 1.7rem;
+        i {
+            font-size: 3.1rem;
+        }
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .map-container, .footer-info {
+      width: 100%;
+    }
+  }
