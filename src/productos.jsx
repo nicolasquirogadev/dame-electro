@@ -5,12 +5,21 @@ import './productos.css'; // Archivo de estilos para este componente
 import forliImg from './assets/forli.jpg';
 import gabEstancoImg from './assets/gab-estanco.jpg';
 import trefilconImg from './assets/trefilcon.png';
-
-//imagenes categorias Macroled
 import macroledLogo from './assets/Macroled.logo.png';
+import kalopLogo from './assets/kalop-logo.png'
+
+//imagenes categorias 
 import iluminacionImg from './assets/lamparas.jpeg';
-import smartHomeImg from './assets/smart.jpeg'
-import electricidadImg from './assets/inteck.jpeg'
+import cat4Img from './assets/cat4ph.png';
+import cat6Img from './assets/cat6.png'
+import electricidadImg from './assets/inteck.jpeg';
+
+// catalogos pdf
+import macroledCat4 from './assets/Macroled_cat4_artf_iluminacion_lamparas.pdf';
+import macroledCat6 from './assets/macroled_cat6.pdf'
+import kalopCat3 from './assets/kalop_cat3.pdf';
+import kalopCat2 from './assets/kalop_cat2.pdf';
+import kalopCat6 from './assets/kalop_cat6.pdf';
 
 const Productos = () => {
   // Estados para manejar la navegación
@@ -26,27 +35,27 @@ const Productos = () => {
     {
       id: 2,
       nombre: 'Canalización / Cajas / Tableros',
-      imagen: electricidadImg,
+      imagen: gabEstancoImg,
     },
     {
       id: 3,
       nombre: 'Conductores Eléctricos',
-      imagen: smartHomeImg,
+      imagen: 'https://kalop.com.ar/wp-content/uploads/2024/11/cable-subterraneo-kalop.webp',
     },
     {
       id: 4,
       nombre: 'Artefactos iluminación / Lámparas',
-      imagen: smartHomeImg,
+      imagen: cat4Img,
     },
     {
       id: 5,
       nombre: 'Herramientas / Grupos electrógenos',
-      imagen: smartHomeImg,
+      imagen: 'https://cdn.prod.website-files.com/66671b125fca5d407bd27dce/669578bca62351d120ea1c99_JDPS0623.png',
     },
     {
       id: 6,
       nombre: 'Llaves de luz / Porteros / Domicilios',
-      imagen: smartHomeImg,
+      imagen: cat6Img,
     },
   ];
 
@@ -116,7 +125,7 @@ const Productos = () => {
         id: 4,
         nombre: 'Kalop',
         imagen: 'https://kalop.com.ar/wp-content/uploads/2024/05/logokalopv0.webp',
-        link: 'https://kalop.com.ar/'
+        link: kalopCat2,
       },
       {
         id: 5,
@@ -161,8 +170,8 @@ const Productos = () => {
       {
         id: 3,
         nombre: 'Kalop',
-        imagen: 'https://kalop.com.ar/wp-content/uploads/2024/05/logokalopv0.webp',
-        link: 'https://kalop.com.ar/'
+        imagen: kalopLogo,
+        link: kalopCat3
       },
     ],
     // Artefactos iluminación / Lámparas
@@ -171,7 +180,7 @@ const Productos = () => {
         id: 1,
         nombre: 'Macroled',
         imagen: macroledLogo,
-        link: 'https://macroled.com.ar/'
+        link: macroledCat4
       },
       {
         id: 2,
@@ -230,14 +239,14 @@ const Productos = () => {
       {
         id: 5,
         nombre: 'Kalop',
-        imagen: 'https://kalop.com.ar/wp-content/uploads/2024/05/logokalopv0.webp',
-        link: 'https://kalop.com.ar/'
+        imagen: kalopLogo,
+        link: kalopCat6,
       },
       {
         id: 6,
         nombre: 'Macroled',
         imagen: macroledLogo,
-        link: 'https://macroled.com.ar/'
+        link: macroledCat6
       },
     ],
   };

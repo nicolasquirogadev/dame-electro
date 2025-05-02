@@ -17,7 +17,7 @@ section {
     gap: 3rem;
   }
   .swiper1 {
-    height: 50dvh;
+    height: 70dvh;
     z-index: 1;
   }
 
@@ -63,12 +63,13 @@ section {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin: 2rem auto;
+    margin: auto auto;
   }
   .slide-content h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 600;
+    max-width: 1200px;
   }
   
   .slide-content p {

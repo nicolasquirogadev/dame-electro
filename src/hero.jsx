@@ -12,6 +12,7 @@ import './mediaqueries.css';
 import './hero.css';
 import trefilconImg from './assets/trefilcon.png';
 import piroloImg from './assets/pirolo.png';
+import kalopLogo from './assets/kalop-logo.png'
 
 function Hero() {
 
@@ -71,6 +72,70 @@ function Hero() {
       ...
     </Swiper>
 
+  <div className="logos">
+    <div className="logos-slide">
+      <img src="https://www.argenplas.net/wp-content/uploads/2020/05/logo_curves-white.png" alt="ArgenPlas" />
+      <img src="https://cambre.com.ar/web/images/cambre-logo.png" alt="Cambre" />
+      <img src="https://www.candil.com.ar/Resources/candil.jpg" alt="Candil" />
+      <img src="https://imgs.search.brave.com/Kv08z_BtZ-0_w3YKHtpUEfyFtMBNrPCuMwsea6ccsyc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94bi0t/YW9zbHV6LXd3YS5j/b20uYXIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDYvY2hp/bnRFbGVjdHJpYy5q/cGc" alt="Chint" />
+      <img src="https://http2.mlstatic.com/storage/mshops-appearance-api/images/86/206072686/logo-2020041815021906700.png" alt="Comax" />
+      <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
+      <img src={kalopLogo} alt="Kalop" />
+      <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
+      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
+      <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
+      <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
+      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
+      <img src="" alt="" />
+      <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
+      <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
+      <img src="" alt="" />
+      <img src="https://microcontrol.com.ar/storage/2023/11/isologo-microcontrol-180x80-1.png" alt="Microcontrol" />
+      <img src={piroloImg} alt="Pirolo" />
+      <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
+      <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
+      <img src={trefilconImg} alt="Trefilcon" />
+      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
+      <img src="" alt="" />
+      <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
+      <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
+      <img src="https://www.zoloda.com.ar/wp-content/uploads/ICONO-1.png" alt="Zoloda" />
+      <img src="https://viyilant.com.ar/wp-content/uploads/2021/03/cropped-cropped-cropped-logo-viyi-pleno-RGB.png" alt="Viyilant" />
+      <img src="https://samet.com.ar/assets/img/logo.png" alt="Samet" />
+    </div>
+
+    <div className="logos-slide">
+      <img src="https://www.argenplas.net/wp-content/uploads/2020/05/logo_curves-white.png" alt="ArgenPlas" />
+      <img src="https://cambre.com.ar/web/images/cambre-logo.png" alt="Cambre" />
+      <img src="https://www.candil.com.ar/Resources/candil.jpg" alt="Candil" />
+      <img src="https://imgs.search.brave.com/Kv08z_BtZ-0_w3YKHtpUEfyFtMBNrPCuMwsea6ccsyc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94bi0t/YW9zbHV6LXd3YS5j/b20uYXIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDYvY2hp/bnRFbGVjdHJpYy5q/cGc" alt="Chint" />
+      <img src="https://http2.mlstatic.com/storage/mshops-appearance-api/images/86/206072686/logo-2020041815021906700.png" alt="Comax" />
+      <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
+      <img src={kalopLogo} alt="Kalop" />
+      <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
+      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
+      <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
+      <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
+      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
+      <img src="" alt="" />
+      <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
+      <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
+      <img src="" alt="" />
+      <img src="https://microcontrol.com.ar/storage/2023/11/isologo-microcontrol-180x80-1.png" alt="Microcontrol" />
+      <img src={piroloImg} alt="Pirolo" />
+      <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
+      <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
+      <img src={trefilconImg} alt="Trefilcon" />
+      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
+      <img src="" alt="" />
+      <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
+      <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
+      <img src="https://www.zoloda.com.ar/wp-content/uploads/ICONO-1.png" alt="Zoloda" />
+      <img src="https://viyilant.com.ar/wp-content/uploads/2021/03/cropped-cropped-cropped-logo-viyi-pleno-RGB.png" alt="Viyilant" />
+      <img src="https://samet.com.ar/assets/img/logo.png" alt="Samet" />
+    </div>
+   </div>
+
 <div className="banda">
     <h3 className="banda-title">Comprometidos con el Rubro Eléctrico</h3>
   
@@ -115,69 +180,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="logos">
-    <div className="logos-slide">
-      <img src="https://www.argenplas.net/wp-content/uploads/2020/05/logo_curves-white.png" alt="ArgenPlas" />
-      <img src="https://cambre.com.ar/web/images/cambre-logo.png" alt="Cambre" />
-      <img src="https://www.candil.com.ar/Resources/candil.jpg" alt="Candil" />
-      <img src="https://imgs.search.brave.com/Kv08z_BtZ-0_w3YKHtpUEfyFtMBNrPCuMwsea6ccsyc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94bi0t/YW9zbHV6LXd3YS5j/b20uYXIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDYvY2hp/bnRFbGVjdHJpYy5q/cGc" alt="Chint" />
-      <img src="https://http2.mlstatic.com/storage/mshops-appearance-api/images/86/206072686/logo-2020041815021906700.png" alt="Comax" />
-      <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
-      <img src="https://kalop.com.ar/wp-content/uploads/2024/05/logokalopv0.webp" alt="Kalop" />
-      <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
-      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
-      <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
-      <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
-      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
-      <img src="" alt="" />
-      <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
-      <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
-      <img src="" alt="" />
-      <img src="https://microcontrol.com.ar/storage/2023/11/isologo-microcontrol-180x80-1.png" alt="Microcontrol" />
-      <img src={piroloImg} alt="Pirolo" />
-      <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
-      <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
-      <img src={trefilconImg} alt="Trefilcon" />
-      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
-      <img src="" alt="" />
-      <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
-      <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
-      <img src="https://www.zoloda.com.ar/wp-content/uploads/ICONO-1.png" alt="Zoloda" />
-      <img src="https://viyilant.com.ar/wp-content/uploads/2021/03/cropped-cropped-cropped-logo-viyi-pleno-RGB.png" alt="Viyilant" />
-      <img src="https://samet.com.ar/assets/img/logo.png" alt="Samet" />
-    </div>
-
-    <div className="logos-slide">
-      <img src="https://www.argenplas.net/wp-content/uploads/2020/05/logo_curves-white.png" alt="ArgenPlas" />
-      <img src="https://cambre.com.ar/web/images/cambre-logo.png" alt="Cambre" />
-      <img src="https://www.candil.com.ar/Resources/candil.jpg" alt="Candil" />
-      <img src="" alt="" />
-      <img src="https://http2.mlstatic.com/storage/mshops-appearance-api/images/86/206072686/logo-2020041815021906700.png" alt="Comax" />
-      <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
-      <img src="https://kalop.com.ar/wp-content/uploads/2024/05/logokalopv0.webp" alt="Kalop" />
-      <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
-      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
-      <img src="" alt="" />
-      <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
-      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
-      <img src="" alt="" />
-      <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
-      <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
-      <img src="" alt="" />
-      <img src="https://microcontrol.com.ar/storage/2023/11/isologo-microcontrol-180x80-1.png" alt="Microcontrol" />
-      <img src="https://industriapriolo.com.ar/wp-content/uploads/2024/04/PRIOLO-2048x714.png" alt="Pirolo" />
-      <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
-      <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
-      <img src="" alt="" />
-      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
-      <img src="" alt="" />
-      <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
-      <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
-      <img src="https://www.zoloda.com.ar/wp-content/uploads/ICONO-1.png" alt="Zoloda" />
-      <img src="https://viyilant.com.ar/wp-content/uploads/2021/03/cropped-cropped-cropped-logo-viyi-pleno-RGB.png" alt="Viyilant" />
-      <img src="https://samet.com.ar/assets/img/logo.png" alt="Samet" />
-    </div>
-   </div>
+   
 
       <h2>Parallax Effect</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>

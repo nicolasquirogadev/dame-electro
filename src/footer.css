@@ -29,6 +29,16 @@
         font-size: 1.3rem;
         margin-bottom: .3rem;
     }
+    p {
+      margin: .4rem 0;
+    }
+    i {
+      text-decoration: none;
+      font-size: 1.6rem;
+      margin-right: .3rem;
+      color: #333;
+      align-self: flex-end;
+  }
   }
   
   .copyright {
@@ -39,35 +49,28 @@
     font-size: 0.9rem;
   }
 
-  .social-links {
-    margin: 2rem auto;
+  a {
+    text-decoration: none;
+    text-emphasis: none;
+    margin: .5rem auto;
+    color: #333;
+    font-size: 1.2rem;
     display: flex;
-    flex-direction: row;
-    
-
-    a {
-        text-decoration: none;
-        font-size: 1.6rem;
-        color: #002850;
-        transition: ease .2s all ;
-        margin: auto 0;
-        display: flex;
-        align-items: center;
-    }
+    align-items: center;
     i {
         text-decoration: none;
-        font-size: 3rem;
+        font-size: 1.6rem;
         margin-right: .3rem;
-        color: #002850;
-        transition: ease .2s all ;
-    }
-    a:hover {
-        font-size: 1.7rem;
-        i {
-            font-size: 3.1rem;
-        }
+        color: #333;
+        align-self: flex-end;
     }
   }
+
+  a:visited {
+    text-decoration: none;
+    color: #333;
+  }
+
   
   @media (max-width: 768px) {
     .footer-content {
