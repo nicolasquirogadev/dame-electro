@@ -131,7 +131,7 @@ section {
   .logos {
     overflow: hidden;
     padding: 60px 0;
-    background: #8191a1a9;
+    background: #9fb2c5a9;
     white-space: nowrap;
   }
 
@@ -192,6 +192,6 @@ section {
     background: #002850;
     padding: 1.5rem 15rem;
     margin: 0 0;
-    width: 100vw;
+    width: 100%;
   }
 

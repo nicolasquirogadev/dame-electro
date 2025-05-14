@@ -9,7 +9,6 @@ import Servicios from './servicios';
 import Contacto from './contacto';
 import Nosotros from './nosotros';
 import dameLogo from './assets/dame.logo.jpg';
-import wppImg from './assets/WhatsAppButtonGreenLarge.svg';
 
 const App = () => {
   const [activeSection, setActiveSection] = useState('hero');
@@ -126,7 +125,7 @@ const App = () => {
 
          <div className="wpp-button">
          <a aria-label="Chat on WhatsApp" href="https://wa.me/5491130733557" target="_blank">
-         <img alt="Chat on WhatsApp" src= {wppImg} />
+         <img alt="Chat on WhatsApp" src= "https://richi.com.ar/img/wa.webp" />
          </a>
          </div>
     </StrictMode>

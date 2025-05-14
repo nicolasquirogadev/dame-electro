@@ -56,7 +56,7 @@ function Hero() {
       
       <SwiperSlide className='slide3'>
         <div className="slide-content">
-        <h1>Ilumina tus espacios con tecnología LED de vanguardia</h1>
+        <h1>Iluminá tus espacios con tecnología LED de vanguardia</h1>
         <p>Ofrecemos las mejores soluciones en iluminación eficiente y sostenible</p>
         <button className="cta-button">Descubre nuestras soluciones LED</button>
         </div>
@@ -136,6 +136,16 @@ function Hero() {
     </div>
    </div>
 
+
+   
+ <div className="parallax1">
+        <div className="parallax-inner">
+          <h1>Scroll Down</h1>
+        </div>
+      </div>
+      <h2>Parallax Effect</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
+      
 <div className="banda">
     <h3 className="banda-title">Comprometidos con el Rubro Eléctrico</h3>
   
@@ -163,16 +173,6 @@ function Hero() {
 
     </div>
    </div>
-   
- <div className="parallax1">
-        <div className="parallax-inner">
-          <h1>Scroll Down</h1>
-        </div>
-      </div>
-      <h2>Parallax Effect</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-      
-
       
       <div className="parallax2">
         <div className="parallax-inner">

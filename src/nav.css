@@ -32,7 +32,10 @@ nav {
   }
   
   .nav-link {
-    font-weight: 500;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.6rem;
     color: whitesmoke;
     text-decoration: none;
   }
