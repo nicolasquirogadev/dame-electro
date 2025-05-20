@@ -39,6 +39,11 @@ nav {
     color: whitesmoke;
     text-decoration: none;
   }
+
+  .nav-link:visited {
+    text-decoration: none;
+    color: whitesmoke;
+  }
   
   .nav-link:hover {
     color: #535bf2;

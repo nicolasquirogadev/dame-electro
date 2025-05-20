@@ -76,7 +76,29 @@ section {
     font-size: 1.5rem;
     margin-bottom: 2rem; 
   }
-  
+
+  .slide-content a {
+    margin: 0 0; 
+  }
+
+  .neon-text {
+    font-family: "Dancing Script", cursive;
+    animation: flicker 1.5s infinite;
+  }
+  @keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      opacity: 1;
+      text-shadow:
+        0 0 5px rgb(250, 255, 175),
+        0 0 10px rgb(250, 241, 191),
+        0 0 20px rgb(248, 245, 208),
+        0 0 40px rgb(255, 245, 155);
+    }
+    20%, 24%, 55% {
+      opacity: 0.5;
+      text-shadow: none;
+    }
+  }
   .cta-button {
     padding: 1rem;
     font-size: 1.2rem;
@@ -94,40 +116,141 @@ section {
     background-color: #005bb5;
   }
 
-  /* Estilos para banda de graficos */
-  .banda {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #003366ab;
-    padding: 1rem;
-  }
+  /* Estilos para slides comerciales */
+.slide-promo {
+  background: url(./assets/inner-local-plafon.jpg) top/cover;
+}
 
-  .banda-title {
-    font-size: 2rem;
-    margin: 2rem auto;
-  }
+.slide-financiacion {
+  background: url(https://cdn1.eldia.com/122024/1733324305425.jpg?&cw=630) center/cover;
+}
 
-  .banda-content {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-    text-align: center;
-    justify-content: space-around;
-    padding: 1rem;
-  }
+.slide-kit {
+  background: url('./assets/jadever-vert.jpg') center/cover;
+}
+.slide-kit::before {
+  background: rgba(0, 0, 0, 0.55); 
+}
 
-  .banda-item{
-    i{
-      font-size: 2.5rem;
-    }
-    p{
-      font-size: 1.2rem;
-    }
-  }
+/* Estructura comercial */
+.slide-content {
+  text-align: left;
+  align-items: flex-start;
+  padding-left: 8%;
+}
+
+.product-image {
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  height: 80%;
+  filter: drop-shadow(0 0 15px rgba(0,102,255,0.5));
+}
+
+.highlight {
+  color: var(--amarillo-accento);
+  font-weight: bold;
+}
+
+/* Badges promocionales */
+.promo-badge {
+  background: var(--amarillo-accento);
+  color: var(--azul-oscuro);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Estilos financiación */
+.bank-promo {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bank-promo img {
+  height: 60px;
+  filter: brightness(0) invert(1);
+}
+
+.promo-details {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Estilos kit */
+.kit-includes {
+  font-style: italic;
+  opacity: 0.9;
+  margin: 1rem 0;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.new-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--amarillo-accento);
+}
+
+.stock-warning {
+  background: rgba(255, 0, 0, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 1rem;
+  border-left: 3px solid red;
+}
+
+/* Product features */
+.product-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin: 1.5rem 0;
+}
+
+.product-features span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.product-features span::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--amarillo-accento);
+  border-radius: 50%;
+}
+
+.product-image {
+  margin-right: 2rem;
+}
+
+.product-image img {
+  height: 80%;
+  opacity: .2;
+}
 
   /* Estilos para el carousel de logos */
-
   .logos {
     overflow: hidden;
     padding: 60px 0;
@@ -161,37 +284,53 @@ section {
     
   }
 
-  /* Estilos para Efecto Parallax */
-  .parallax1 {
-    background: url('assets/inner-local-vert.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
+  /* Sección de Valor */
+.valor-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-  .parallax2 {
-    background: url('assets/jadever-vert.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
+.valor-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 102, 255, 0.1);
+  transition: all 0.3s ease;
+}
 
-  .parallax3 {
-    background: url('assets/rollos-vert.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
+.valor-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--azul-electrico);
+}
 
-  .parallax-inner{
-    padding: 13% 0;
-    background: rgba(0, 0, 0, 0.397);
-  }
+.valor-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
 
-  section > h2, section > p {
-    background: #002850;
-    padding: 1.5rem 15rem;
-    margin: 0 0;
-    width: 100%;
-  }
+.valor-card h3 {
+  color: var(--amarillo-accento);
+  margin-bottom: 0.5rem;
+}
 
+/* Responsive */
+@media (max-width: 768px) {
+  .slide-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .slide-content p {
+    font-size: 1.2rem;
+  }
+  
+  .valor-section {
+    grid-template-columns: 1fr;
+  }
+}

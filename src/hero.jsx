@@ -1,6 +1,6 @@
 // import Swiper core and required modules
 import Footer from './Footer'
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -13,6 +13,7 @@ import './hero.css';
 import trefilconImg from './assets/trefilcon.png';
 import piroloImg from './assets/pirolo.png';
 import kalopLogo from './assets/kalop-logo.png'
+import productImg from './assets/macroled/BT-55-7.jpeg'
 
 function Hero() {
 
@@ -24,14 +25,10 @@ function Hero() {
 
         <Swiper
       className='swiper1'
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={1}
+      modules={[Navigation, Pagination, Autoplay]}
+      autoplay={{ delay: 4000 }}
       navigation
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
     >
       <SwiperSlide className='slide1'>
         
@@ -44,32 +41,64 @@ function Hero() {
 
       </SwiperSlide>
 
-      <SwiperSlide className='slide2'>
-
-        <div className="slide-content">
-        <h1>Lideres en iluminacion </h1>
-        <p>Venta mayorista y minorista para industrias y hogares</p>
-        <button className="cta-button">Ver productos</button>
-        </div>
-
-      </SwiperSlide>
+      <SwiperSlide className="slide slide-financiacion">
+          <div className="slide-content">
+            <div className="bank-promo">
+              <img src="https://www.bancoprovincia.com.ar/CDN/Get/logo_2021_S" alt="Banco Provincia" />
+              <div className="promo-text">
+                <h1><span className="highlight">4 CUOTAS SIN INTERÉS</span></h1>
+                <p>+ 15% OFF en pagos con transferencia bancaria</p>
+                <div className="promo-details">
+                  <span>✅ Todos los productos</span>
+                  <span>✅ Sin costo adicional</span>
+                </div>
+              </div>
+            </div>
+            <button className="cta-button">Ver condiciones</button>
+          </div>
+        </SwiperSlide>
       
       <SwiperSlide className='slide3'>
         <div className="slide-content">
-        <h1>Iluminá tus espacios con tecnología LED de vanguardia</h1>
+        <h1><span className='neon-text'>Iluminá</span> tus espacios</h1>
         <p>Ofrecemos las mejores soluciones en iluminación eficiente y sostenible</p>
-        <button className="cta-button">Descubre nuestras soluciones LED</button>
+        <button className="cta-button">Descubre nuestras lámparas LED</button>
         </div>
       </SwiperSlide>
 
-      <SwiperSlide className='slide4'>
+      <SwiperSlide className="slide slide-promo">
         <div className="slide-content">
-        <h1>Automatiza y controla tus sistemas eléctricos</h1>
-        <p>Soluciones inteligentes para una gestión eficiente de la energía</p>
-        <button className="cta-button">Explora la automatización</button>
+          <div className="promo-badge">MÁS VENDIDO</div>
+          <h1>Lámparas LED Macroled <span className="highlight">30% OFF</span></h1>
+          <p>Calidad profesional con garantía extendida de 3 años</p>
+          <div className="product-features">
+            <span>✔ Ahorro energético</span>
+            <span>✔ Instalación inmediata</span>
+            <span>✔ Stock permanente</span>
+          </div>
+          <button className="cta-button">Ver oferta</button>
+        </div>
+        <div className="product-image">
+          <img src={productImg} alt="Lámpara LED Macroled" />
         </div>
       </SwiperSlide>
-      ...
+
+
+      <SwiperSlide className="slide slide-kit">
+          <div className="slide-content">
+            <h1>Kit Electricista <span className="highlight">Premium</span></h1>
+            <p className="kit-includes">Incluye: Cables Trefilcon + Termicas Chint + Herramientas Jadever</p>
+            <div className="price-container">
+              <span className="old-price">$245.000</span>
+              <span className="new-price">$199.900</span>
+            </div>
+            <div className="stock-warning">
+              <span>⚠ Últimas 15 unidades disponibles</span>
+            </div>
+            <button className="cta-button">Comprar ahora</button>
+          </div>
+        </SwiperSlide>
+
     </Swiper>
 
   <div className="logos">
@@ -137,62 +166,24 @@ function Hero() {
    </div>
 
 
-   
- <div className="parallax1">
-        <div className="parallax-inner">
-          <h1>Scroll Down</h1>
+  {/* Sección de Valor */}
+      <div className="valor-section">
+        <div className="valor-card">
+          <div className="valor-icon">🚚</div>
+          <h3>Envíos a todo el país</h3>
+          <p>Logística especializada para AMBA e interior</p>
+        </div>
+        <div className="valor-card">
+          <div className="valor-icon">💳</div>
+          <h3>Flexibilidad de pagos</h3>
+          <p>Hasta 4 cuotas sin interés</p>
+        </div>
+        <div className="valor-card">
+          <div className="valor-icon">🛠️</div>
+          <h3>Asesoramiento técnico</h3>
+          <p>Expertos en soluciones eléctricas</p>
         </div>
       </div>
-      <h2>Parallax Effect</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-      
-<div className="banda">
-    <h3 className="banda-title">Comprometidos con el Rubro Eléctrico</h3>
-  
-  <div className="banda-content">
-
-    <div className="banda-item">
-      <i className="fa-solid fa-industry"></i>
-      <p>EMPRESAS</p>
-    </div>
-
-    <div className="banda-item">
-      <i className="fa-solid fa-users"></i>
-      <p>CONSUMIDOR FINAL</p>
-    </div>
-
-    <div className="banda-item">
-      <i className="fa-solid fa-helmet-safety"></i>
-      <p>GREMIO</p>
-    </div>
-
-    <div className="banda-item">
-      <i className="fa-solid fa-landmark"></i>
-      <p>ORGANISMOS PUIBLICOS</p>
-    </div>
-
-    </div>
-   </div>
-      
-      <div className="parallax2">
-        <div className="parallax-inner">
-          <h1>Parallax Effect</h1>
-        </div>
-      </div>
-
-   
-
-      <h2>Parallax Effect</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-      <div className="parallax3">
-        <div className="parallax-inner">
-          <h1>Parallax Effect</h1>
-        </div>
-      </div>
-      <h2>Parallax Effect</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis libero, eum accusantium beatae aspernatur consequatur iste? Delectus, repellendus nisi. Eos numquam quaerat autem at temporibus necessitatibus deleniti id minus distinctio!</p>
-
-
     </section>
 
     < Footer />

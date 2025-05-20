@@ -1,0 +1,270 @@
+/* servicios.css - Estilos para la sección de Servicios */
+:root {
+  --azul-oscuro: #0a1a35;
+  --azul-medio: #14316c;
+  --azul-electrico: #0066ff;
+  --amarillo-accento: #ffd700;
+  --blanco: #ffffff;
+  --gris-claro: #f0f4f8;
+}
+
+/* Estructura Principal */
+.servicios-section {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, #000913 100%);
+  padding: 4rem 2rem;
+  color: var(--blanco);
+  position: relative;
+  overflow: hidden;
+}
+
+.servicios-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0,102,255,0.1) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+}
+
+/* Grid de Servicios */
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tarjetas de Servicio con Glassmorphism */
+.servicio-card {
+  background: rgba(10, 26, 53, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(0, 102, 255, 0.4);
+  box-shadow: 0 12px 40px rgba(0, 102, 255, 0.15);
+}
+
+/* Iconografía */
+.icono-electrico, 
+.icono-camion {
+  font-size: 2.5rem;
+  color: var(--azul-electrico);
+  margin-bottom: 1rem;
+  display: inline-block;
+  background: rgba(0, 102, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--azul-electrico);
+}
+
+/* Tipografía */
+.servicio-card h3 {
+  color: var(--blanco);
+  margin: 1rem 0;
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.servicio-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--amarillo-accento);
+}
+
+.servicio-card p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.servicio-card {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Chips de Destacado */
+.chip-azul, 
+.chip-rojo {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.chip-azul {
+  background: rgba(0, 102, 255, 0.2);
+  color: var(--azul-electrico);
+  border: 1px solid var(--azul-electrico);
+}
+
+.chip-rojo {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b;
+}
+
+/* Timeline de Proceso */
+.proceso-compra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px;
+  margin: 4rem auto;
+  position: relative;
+  z-index: 1;
+}
+
+.proceso-compra::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent 10%, 
+    var(--azul-electrico) 50%, 
+    transparent 90%);
+  z-index: 1;
+}
+
+.paso {
+  text-align: center;
+  flex: 1;
+}
+
+.circulo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--azul-electrico);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: relative;
+  z-index: 2;
+  border: 3px solid var(--azul-medio);
+}
+
+
+/* Sección de Pagos - Glassmorphism */
+.medios-pago {
+  background: rgba(238, 243, 255, 0.671);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  margin: 1rem auto;
+  border: 3px solid transparent;
+  max-width: 60%;
+}
+
+.medios-pago h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--blanco);
+  font-size: 1.8rem;
+}
+
+.pagos-scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.pagos-scroll img {
+  height: 30px;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.pagos-scroll img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.destacado {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(250, 239, 176, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--amarillo-accento);
+  transition: all 0.3s ease;
+}
+
+.destacado:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  img {
+    opacity: 1;
+  }
+}
+
+.destacado img:hover {
+  transform: none;
+}
+
+.destacado span {
+  color: var(--amarillo-accento);
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .proceso-compra {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .paso {
+    margin-bottom: 2rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .circulo {
+    margin: 0 1rem 0 0;
+    flex-shrink: 0;
+  }
+  
+  .linea-azul {
+    display: none;
+  }
+}
