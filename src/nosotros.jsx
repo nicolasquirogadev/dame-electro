@@ -1,50 +1,21 @@
 import './nosotros.css';
 import Footer from './Footer'
-import equipoImg from './assets/solar.jpeg'; // Reemplaza con tu imagen
-import obrasImg from './assets/inner-local-vert.jpg'; // Reemplaza con tu imagen
+import equipoImg from './assets/solar.jpeg'; 
+import obrasImg from './assets/inner-local-vert.jpg'; 
+import { Link } from 'react-router-dom';
 
 function Nosotros() {
 
     return (
         <>
-{/* comment 
-        <section id="nosotros">
-            <div className="parallax1">
-        <div className="parallax-inner">
-          <h1>NOSOTROS</h1>
-        </div>
-      </div>
-      <h2>Distribuidora Argentina de Materiales Eléctricos</h2>
 
-      <p>Empresa con una trayectoria de 20 años, dedicada a la 
-        comercialización mayorista y minorista de materiales eléctricos e 
-        iluminación de marcas lideres en el rubro, garantizando 
-        instalaciones 100% seguras.</p>
-
-     <p>Somos proveedores de constructoras y desarrolladoras 
-        inmobiliarias lo que nos brinda 
-        una vasta experiencia en abastecimiento de obras de gran porte.</p>
-      
-      <div className="parallax2">
-        <div className="parallax-inner">
-          <h1>Titulo Titulo</h1>
-        </div>
-      </div>
-        
-        <p>Contamos con un amplio conocimiento puesto al servicio de profesionales y empresas 
-            Pyme acompañando y construyendo relaciones de confianza a largo plazo.</p>
-        
-        <p>Si buscas un aliado estratégico no dudes en contactarnos  y conocernos.</p>
-        </section>
-*/}
-
-<section id="nosotros" className="nosotros-section">
+  <section id="nosotros" className="nosotros-section">
       
       {/* Hero Section */}
       <div className="nosotros-hero">
         <div className="hero-overlay"></div>
         <div className="hero-content">
-          <h1>20 años iluminando proyectos</h1>
+          <h1>20 años impulsando proyectos</h1>
           <p>Expertos en soluciones eléctricas para grandes obras y profesionales</p>
         </div>
       </div>
@@ -100,7 +71,9 @@ function Nosotros() {
           <div className="aliados-text">
             <h2>Tu aliado estratégico</h2>
             <p>En DAME combinamos dos décadas de experiencia con el catálogo más completo de marcas líderes para ofrecerte soluciones eléctricas integrales.</p>
+            < Link to='/contacto' className='nosotros-cta'>
             <button className="contacto-btn">Contactanos</button>
+            </Link>
           </div>
           <div className="aliados-img">
             <img src={obrasImg} alt="Trabajos eléctricos en obra" />

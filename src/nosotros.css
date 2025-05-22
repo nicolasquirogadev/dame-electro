@@ -209,6 +209,11 @@
     }
 }
 
+.nosotros-cta {
+  display: inherit;
+  position: relative;
+}
+
 .contacto-btn {
   background: var(--azul-electrico);
   color: white;

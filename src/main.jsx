@@ -1,8 +1,9 @@
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './index.css';
 import './nav.css';
-import './mediaqueries.css'
+import './mediaqueries.css';
 import Hero from './hero';
 import Productos from './productos';
 import Servicios from './servicios';
@@ -11,125 +12,103 @@ import Nosotros from './nosotros';
 import dameLogo from './assets/dame.logo.jpg';
 
 const App = () => {
-  const [activeSection, setActiveSection] = useState('hero');
-  const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar el menú móvil
+  const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
 
-  const renderSection = () => {
-    switch (activeSection) {
-      case 'hero':
-        return <Hero />;
-      case 'nosotros':
-        return <Nosotros />;
-      case 'productos':
-        return <Productos />;
-      case 'servicios':
-        return <Servicios />;
-      case 'contacto':
-        return <Contacto />;
-      default:
-        return null;
-    }
-  };
-
-  // Función para alternar el menú móvil
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
-
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+  
   // Función para cerrar el menú al hacer clic en un enlace
-  const handleNavClick = (section) => {
-    setActiveSection(section);
-    setMenuOpen(false); // Cierra el menú móvil
-  };
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <StrictMode>
       <nav>
         <div className="top-wrapper">
-        <div className="logo-container">
-          <a
-            href="#hero"
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleNavClick('hero');
-            }}
-          >
-            <img src={dameLogo} alt="D.A.M.E. logo" />
-          </a>
-        </div>
+          <div className="logo-container">
+            <Link to="/" className="nav-link" onClick={closeMenu}>
+              <img src={dameLogo} alt="D.A.M.E. logo" />
+            </Link>
+          </div>
 
-        {/* Botón de hamburguesa para móviles */}
-        <button className={`hamburger-menu ${menuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-          <span className="hamburger-line"></span>
-        </button>
+          {/* Botón de hamburguesa para móviles */}
+          <button 
+            className={`hamburger-menu ${menuOpen ? 'active' : ''}`} 
+            onClick={toggleMenu}
+            aria-label="Menú"
+          >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+          </button>
         </div>
 
         {/* Menú de navegación */}
         <ul className={`nav-wrapper ${menuOpen ? 'active' : ''}`}>
           <li className="nav-item">
-            <a
-              href="#nosotros"
-              className="nav-link"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('nosotros');
-              }}
+            <Link 
+              to="/nosotros" 
+              className={`nav-link ${location.pathname === '/nosotros' ? 'active' : ''}`}
+              onClick={closeMenu}
             >
               Nosotros
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              href="#productos"
-              className="nav-link"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('productos');
-              }}
+            <Link 
+              to="/productos" 
+              className={`nav-link ${location.pathname.startsWith('/productos') ? 'active' : ''}`}
+              onClick={closeMenu}
             >
               Productos
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              href="#servicios"
-              className="nav-link"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('servicios');
-              }}
+            <Link 
+              to="/servicios" 
+              className={`nav-link ${location.pathname === '/servicios' ? 'active' : ''}`}
+              onClick={closeMenu}
             >
               Servicios
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a
-              href="#contacto"
-              className="nav-link"
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick('contacto');
-              }}
+            <Link 
+              to="/contacto" 
+              className={`nav-link ${location.pathname === '/contacto' ? 'active' : ''}`}
+              onClick={closeMenu}
             >
               Contacto
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>
 
-      {renderSection()}
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+        <Route path="/productos" element={<Productos />} />
+        <Route path="/productos/:categoryId" element={<Productos />} />
+        <Route path="/servicios" element={<Servicios />} />
+        <Route path="/contacto" element={<Contacto />} />
+      </Routes>
 
-
-         <div className="wpp-button">
-         <a aria-label="Chat on WhatsApp" href="https://wa.me/5491130733557" target="_blank">
-         <img alt="Chat on WhatsApp" src= "https://richi.com.ar/img/wa.webp" />
-         </a>
-         </div>
+      <div className="wpp-button">
+        <a 
+          aria-label="Chat on WhatsApp" 
+          href="https://wa.me/5491130733557" 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img alt="Chat on WhatsApp" src="https://imgs.search.brave.com/mm-hPdGqieeJmtzX92vizsQekbTeHtmB7735QC3RLjY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi82LzZiL1do/YXRzQXBwLnN2Zy8y/NTBweC1XaGF0c0Fw/cC5zdmcucG5n" />
+        </a>
+      </div>
     </StrictMode>
   );
 };
 
-createRoot(document.getElementById('root')).render(<App />);
+// Envolvemos App con Router en el render
+createRoot(document.getElementById('root')).render(
+  <Router>
+    <App />
+  </Router>
+);

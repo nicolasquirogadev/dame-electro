@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './productos.css'; // Archivo de estilos para este componente
+import { useState, useEffect } from 'react';
+import './productos.css';
+import { useParams, useNavigate } from 'react-router-dom';
 
 // imagenes Forli
 import forliImg from './assets/forli.jpg';
@@ -22,9 +23,20 @@ import kalopCat2 from './assets/kalop_cat2.pdf';
 import kalopCat6 from './assets/kalop_cat6.pdf';
 
 const Productos = () => {
-  // Estados para manejar la navegación
+  const { categoryId } = useParams();
+  const navigate = useNavigate();
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
 
+  // Efecto para cargar la categoría cuando cambia el parámetro de la URL
+  useEffect(() => {
+    if (categoryId) {
+      const categoria = categorias.find(cat => cat.id === parseInt(categoryId));
+      setCategoriaSeleccionada(categoria || null);
+    } else {
+      setCategoriaSeleccionada(null);
+    }
+  }, [categoryId]);
+  
   // Definimos las categorías principales
   const categorias = [
     {
@@ -251,12 +263,12 @@ const Productos = () => {
     ],
   };
 
-  // Función para manejar el clic en una categoría
+   // Función para manejar el clic en una categoría
   const handleCategoriaClick = (categoria) => {
-    setCategoriaSeleccionada(categoria);
+    navigate(`/productos/${categoria.id}`);
   };
 
-  // Función para manejar el clic en un proveedor (abre enlace en nueva pestaña)
+ // Función para manejar el clic en un proveedor
   const handleProveedorClick = (proveedor) => {
     if (proveedor.link) {
       window.open(proveedor.link, '_blank');
@@ -265,7 +277,7 @@ const Productos = () => {
 
   // Función para volver atrás
   const handleVolver = () => {
-    setCategoriaSeleccionada(null);
+    navigate('/productos');
   };
 
   return (
@@ -273,7 +285,6 @@ const Productos = () => {
       <h1>Nuestros Productos</h1>
       
       {categoriaSeleccionada ? (
-        // Vista de proveedores para la categoría seleccionada
         <div className="proveedores-container">
           <button onClick={handleVolver} className="btn-volver">
             Volver a categorías
@@ -294,7 +305,6 @@ const Productos = () => {
           </div>
         </div>
       ) : (
-        // Vista inicial de categorías
         <div className="categorias-grid">
           {categorias.map(categoria => (
             <div 

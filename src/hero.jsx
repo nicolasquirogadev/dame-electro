@@ -2,6 +2,7 @@
 import Footer from './Footer'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -26,7 +27,7 @@ function Hero() {
         <Swiper
       className='swiper1'
       modules={[Navigation, Pagination, Autoplay]}
-      autoplay={{ delay: 4000 }}
+      autoplay={{ delay: 6000 }}
       navigation
       pagination={{ clickable: true }}
     >
@@ -35,8 +36,9 @@ function Hero() {
         <div className="slide-content">
         <h1>Potencia tu negocio con los mejores productos eléctricos</h1>
         <p>Distribuidores líderes en soluciones eléctricas de alta calidad</p>
+        < Link to='/productos' className='swiper-cta'>
         <button className="cta-button">Explora nuestro catálogo</button>
-
+        </Link>
         </div>
 
       </SwiperSlide>
@@ -54,7 +56,9 @@ function Hero() {
                 </div>
               </div>
             </div>
+            < Link to='/servicios' className='swiper-cta'>
             <button className="cta-button">Ver condiciones</button>
+            </Link>
           </div>
         </SwiperSlide>
       
@@ -62,7 +66,9 @@ function Hero() {
         <div className="slide-content">
         <h1><span className='neon-text'>Iluminá</span> tus espacios</h1>
         <p>Ofrecemos las mejores soluciones en iluminación eficiente y sostenible</p>
+        < Link to='/productos/4' className='swiper-cta'>
         <button className="cta-button">Descubre nuestras lámparas LED</button>
+        </Link>
         </div>
       </SwiperSlide>
 
@@ -76,7 +82,9 @@ function Hero() {
             <span>✔ Instalación inmediata</span>
             <span>✔ Stock permanente</span>
           </div>
+          < Link to='/productos' className='swiper-cta'>
           <button className="cta-button">Ver oferta</button>
+          </Link>
         </div>
         <div className="product-image">
           <img src={productImg} alt="Lámpara LED Macroled" />
@@ -95,7 +103,9 @@ function Hero() {
             <div className="stock-warning">
               <span>⚠ Últimas 15 unidades disponibles</span>
             </div>
+            < Link to='/productos' className='swiper-cta'>
             <button className="cta-button">Comprar ahora</button>
+            </Link>
           </div>
         </SwiperSlide>
 

@@ -116,6 +116,11 @@ section {
     background-color: #005bb5;
   }
 
+  .swiper-cta {
+    width: 100%;
+    height: 100%;
+  }
+
   /* Estilos para slides comerciales */
 .slide-promo {
   background: url(./assets/inner-local-plafon.jpg) top/cover;
