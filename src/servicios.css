@@ -177,7 +177,7 @@
 }
 
 
-/* Sección de Pagos - Glassmorphism */
+/* Sección de Pagos */
 .medios-pago {
   background: rgba(238, 243, 255, 0.671);
   backdrop-filter: blur(8px);
@@ -185,7 +185,7 @@
   padding: 2rem;
   margin: 1rem auto;
   border: 3px solid transparent;
-  max-width: 60%;
+  width: 60%;
 }
 
 .medios-pago h3 {
@@ -266,5 +266,15 @@
   
   .linea-azul {
     display: none;
+  }
+
+  .medios-pago {
+    width: 85dvw;
+    margin: 1rem auto;
+  }
+
+  .destacado > span {
+    width: 80px;
+    text-align: center;
   }
 }

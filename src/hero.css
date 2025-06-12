@@ -57,13 +57,15 @@ section {
   
   /* Estilos para el contenido (título, subtítulo, CTA) */
   .slide-content {
-    position: relative;
-    z-index: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin: auto auto;
+  text-align: left;
+  align-items: flex-start;
+  position: relative;
+  z-index: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: auto auto;
   }
   .slide-content h1 {
     font-size: 6rem;
@@ -137,12 +139,6 @@ section {
   background: rgba(0, 0, 0, 0.55); 
 }
 
-/* Estructura comercial */
-.slide-content {
-  text-align: left;
-  align-items: flex-start;
-  padding-left: 8%;
-}
 
 .product-image {
   position: absolute;
@@ -338,4 +334,5 @@ section {
   .valor-section {
     grid-template-columns: 1fr;
   }
+ 
 }

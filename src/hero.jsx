@@ -26,15 +26,15 @@ function Hero() {
 
         <Swiper
       className='swiper1'
-      modules={[Navigation, Pagination, Autoplay]}
-      autoplay={{ delay: 6000 }}
+      modules={[Navigation, Pagination, ]}
+      /* autoplay= {{6000}} */ 
       navigation
       pagination={{ clickable: true }}
     >
       <SwiperSlide className='slide1'>
         
         <div className="slide-content">
-        <h1>Potencia tu negocio con los mejores productos eléctricos</h1>
+        <h1>Potenciá tu negocio con los mejores productos eléctricos</h1>
         <p>Distribuidores líderes en soluciones eléctricas de alta calidad</p>
         < Link to='/productos' className='swiper-cta'>
         <button className="cta-button">Explora nuestro catálogo</button>

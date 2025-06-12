@@ -52,31 +52,83 @@
 
     /* Estilos para slider */
      #root .swiper {
-        height: 70dvh;
+        height: 90dvh;
     }
-    .swiper-slide .slide-content {
-        position: relative;
-        justify-content: space-around;
-        align-items: center;
-        margin: 0 3rem 2rem;
-      }
-      .swiper-slide .slide-content h1 {
-        font-size: 2.2rem;
-        margin: 0;
-      }
-      
-      .swiper-slide .slide-content p {
-        font-size: 1rem;
-        margin: 0; 
-      }
-      
-      .swiper-slide .slide-content .cta-button {
-        padding: .6rem;
-        font-size: .9rem;
-        width: 70%;
-        margin: 0;
-        
-      }
+
+    .slide-content {
+      flex-direction: column !important;
+      margin: auto 1.2rem !important;
+    }
+
+    .slide1 > .slide-content > p {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+
+    .slide1 > .slide-content {
+      text-align: center;
+    }
+
+    .swiper-cta {
+      height: fit-content !important;
+    }
+
+    .swiper-cta > .cta-button {
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .slide-financiacion > .slide-content {
+      width: 100%;
+      margin: 0 1.3rem;
+    }
+
+    .bank-promo {
+      margin: 0 1rem;
+      gap: .3rem !important;
+      margin-top: 2rem;
+      flex-direction: column;
+    }
+
+    .promo-text > p {
+      margin-top: 1rem;
+    }
+
+    .promo-text {
+      margin-left: 1rem;
+    }
+
+    .slide3 > .slide-content {
+      margin: auto 2.6rem !important;
+    }
+
+    .slide3 > .slide-content > h1 {
+      font-size: 3.4rem;
+      text-align: center;
+    }
+
+    .slide3 > .slide-content > h1 > .neon-text {
+      font-size: 5rem;
+    }
+
+    .slide3 > .slide-content > p {
+      text-align: center;
+    }
+
+    .slide-promo > .slide-content {
+      margin: auto 3.3rem !important;
+      gap: 1.8rem;
+    }
+
+    .slide-kit > .slide-content {
+      margin: auto 3.3rem !important;
+      gap: 1.8rem;
+    }
+
+    .medios-pago {
+      width: 90dvw;
+    }
+   
 
       /* Estilos para seccion productos */
       #productos {

@@ -81,4 +81,17 @@
     .map-container, .footer-info {
       width: 100%;
     }
+
+    .footer-info > h3 {
+      font-size: 1.8rem;
+    }
+
+    .footer-info > p {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-info > a  {
+      font-size: 1rem;
+    }
   }
