@@ -1,54 +1,100 @@
-#contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 85vh;
+.contacto-section {
+  background: linear-gradient(135deg, var(--azul-oscuro) 0%, #000913 100%);
+  color: var(--blanco);
+  padding: 4rem 2rem;
+  min-height: 100vh;
 }
 
-h1 {
-    font-size: 4rem;
+.contacto-header {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
-p {
-    font-size: 1.2rem;
+.contacto-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--blanco);
 }
 
-.cont-wrapper{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+.highlight {
+  color: var(--amarillo-accento);
 }
 
-.contact-link {
-    height: 8rem;
-    background-color: rgba(4, 16, 70, 0.493);
-    border-radius: 14px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    transition: all .3s ease;
-    gap: 1rem;
-    i {
-        font-size: 2rem;
-    }
+.contacto-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.contact-link:hover {
-    background-color: rgba(22, 34, 88, 0.548);
-    cursor: pointer;
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 3rem;
 }
 
-.contact-content {
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    p{
-        font-size: 1rem;
-    }
+.contacto-card {
+  background: rgba(10, 26, 53, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(0, 102, 255, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.contact-title {
-    font-size: 1.8rem;
-    margin: 0 auto;
+.contacto-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--amarillo-accento);
+  box-shadow: 0 10px 20px rgba(0, 102, 255, 0.1);
+}
+
+.contacto-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.contacto-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--blanco);
+}
+
+.contacto-content p {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.contacto-action {
+  color: var(--amarillo-accento);
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.contacto-mapa {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(20, 49, 108, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.contacto-mapa h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contacto-title {
+    font-size: 2.2rem;
+  }
+  
+  .contacto-grid {
+    grid-template-columns: 1fr;
+  }
 }

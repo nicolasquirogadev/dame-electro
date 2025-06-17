@@ -1,57 +1,54 @@
-import './contacto.css'
+import './contacto.css';
+import Footer from './Footer'
 
 function Contacto() {
+  return (
+    <section id="contacto" className="contacto-section">
+      <div className="contacto-header">
+        <h1 className="contacto-title">Comunicate con <span className="highlight">D.A.M.E.</span></h1>
+        <p className="contacto-subtitle">Envianos tu consulta o pedí tu presupuesto por el medio que prefieras</p>
+      </div>
 
-    return (
-        <section id="contacto">
-            <h1>Comunicate con D.A.M.E.</h1>
-            <p>Envianos tu consulta o pedi tu presupuesto por el medio que elijas:</p>
+      <div className="contacto-grid">
+        <div className="contacto-card" onClick={() => window.location.href = 'tel:+5491145678901'}>
+          <div className="contacto-icon" style={{ color: 'var(--amarillo-accento)' }}>
+            <i className="fa-solid fa-phone"></i>
+          </div>
+          <div className="contacto-content">
+            <h3>Teléfono</h3>
+            <p>+54 9 11 4567-8901</p>
+            <span className="contacto-action">Llamar ahora</span>
+          </div>
+        </div>
 
-            <div className="cont-wrapper">
+        <div className="contacto-card" onClick={() => window.location.href = 'mailto:dame@gmail.com'}>
+          <div className="contacto-icon" style={{ color: 'var(--azul-electrico)' }}>
+            <i className="fa-solid fa-envelope"></i>
+          </div>
+          <div className="contacto-content">
+            <h3>Email</h3>
+            <p>dame@gmail.com</p>
+            <span className="contacto-action">Enviar email</span>
+          </div>
+        </div>
 
-            <div className="contact-link">
-                <div className="contact-icon">
-                    <i className="fa-solid fa-phone"></i>
-                </div>
-                <div className="contact-content">
-                    <h4 className='contact-title'>Telefono:</h4>
-                    <p>+54 9 11 4567-8901</p>
-                </div>
-            </div>
+        <div className="contacto-card" onClick={() => window.open('https://wa.me/5491145678901', '_blank')}>
+          <div className="contacto-icon" style={{ color: '#25D366' }}>
+            <i className="fa-brands fa-whatsapp"></i>
+          </div>
+          <div className="contacto-content">
+            <h3>WhatsApp</h3>
+            <p>+54 9 11 4567-8901</p>
+            <span className="contacto-action">Enviar mensaje</span>
+          </div>
+        </div>
 
-            <div className="contact-link">
-                <div className="contact-icon">
-                <i className="fa-solid fa-envelope"></i>
-                </div>
-                <div className="contact-content">
-                    <h4 className='contact-title'>Escribinos por email:</h4>
-                    <p>dame@gmail.com</p>
-                </div>
-            </div>
+      </div>
 
-            <div className="contact-link">
-                <div className="contact-icon">
-                <i className="fa-brands fa-whatsapp"></i>
-                </div>
-                <div className="contact-content">
-                    <h4 className='contact-title'>WhatsApp:</h4>
-                    <p>+54 9 11 4567-8901</p>
-                </div>
-            </div>
+      < Footer />
 
-            <div className="contact-link">
-                <div className="contact-icon">
-                    <i className="fa-regular fa-clock"></i>
-                </div>
-                <div className="contact-content">
-                    <h4 className='contact-title'>Horario de atencion:</h4>
-                    <p>Lunes a Viernes de 9:00 a 17:00</p>
-                </div>
-            </div>
-
-            </div>
-        </section>
-    )
+    </section>
+  );
 }
 
-export default Contacto
+export default Contacto;
