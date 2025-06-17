@@ -11,26 +11,31 @@ import Contacto from './contacto';
 import Nosotros from './nosotros';
 import dameLogo from './assets/dame.logo.jpg';
 
-const App = () => {
+// Componente principal que contiene la lógica de navegación
+const AppContent = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
   
-  // Función para cerrar el menú al hacer clic en un enlace
-  const closeMenu = () => setMenuOpen(false);
+  const closeAndScroll = () => {
+    setMenuOpen(false);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
-    <StrictMode>
+    <>
       <nav>
         <div className="top-wrapper">
           <div className="logo-container">
-            <Link to="/" className="nav-link" onClick={closeMenu}>
+            <Link to="/" className="nav-link" onClick={closeAndScroll}>
               <img src={dameLogo} alt="D.A.M.E. logo" />
             </Link>
           </div>
 
-          {/* Botón de hamburguesa para móviles */}
           <button 
             className={`hamburger-menu ${menuOpen ? 'active' : ''}`} 
             onClick={toggleMenu}
@@ -42,13 +47,12 @@ const App = () => {
           </button>
         </div>
 
-        {/* Menú de navegación */}
         <ul className={`nav-wrapper ${menuOpen ? 'active' : ''}`}>
           <li className="nav-item">
             <Link 
               to="/nosotros" 
               className={`nav-link ${location.pathname === '/nosotros' ? 'active' : ''}`}
-              onClick={closeMenu}
+              onClick={closeAndScroll}
             >
               Nosotros
             </Link>
@@ -57,7 +61,7 @@ const App = () => {
             <Link 
               to="/productos" 
               className={`nav-link ${location.pathname.startsWith('/productos') ? 'active' : ''}`}
-              onClick={closeMenu}
+              onClick={closeAndScroll}
             >
               Productos
             </Link>
@@ -66,7 +70,7 @@ const App = () => {
             <Link 
               to="/servicios" 
               className={`nav-link ${location.pathname === '/servicios' ? 'active' : ''}`}
-              onClick={closeMenu}
+              onClick={closeAndScroll}
             >
               Servicios
             </Link>
@@ -75,7 +79,7 @@ const App = () => {
             <Link 
               to="/contacto" 
               className={`nav-link ${location.pathname === '/contacto' ? 'active' : ''}`}
-              onClick={closeMenu}
+              onClick={closeAndScroll}
             >
               Contacto
             </Link>
@@ -84,7 +88,7 @@ const App = () => {
       </nav>
 
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route index element={<Hero />} /> 
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/productos" element={<Productos />} />
         <Route path="/productos/:categoryId" element={<Productos />} />
@@ -99,16 +103,23 @@ const App = () => {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          <img alt="Chat on WhatsApp" src="https://imgs.search.brave.com/mm-hPdGqieeJmtzX92vizsQekbTeHtmB7735QC3RLjY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi82LzZiL1do/YXRzQXBwLnN2Zy8y/NTBweC1XaGF0c0Fw/cC5zdmcucG5n" />
+          <img alt="Chat on WhatsApp" src="https://richi.com.ar/img/wa.webp" />
         </a>
       </div>
+    </>
+  );
+};
+
+// Componente raíz 
+const App = () => {
+  return (
+    <StrictMode>
+      <Router>
+        <AppContent />
+      </Router>
     </StrictMode>
   );
 };
 
-// Envolvemos App con Router en el render
-createRoot(document.getElementById('root')).render(
-  <Router>
-    <App />
-  </Router>
-);
+// Renderizado
+createRoot(document.getElementById('root')).render(<App />);
