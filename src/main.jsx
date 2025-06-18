@@ -103,7 +103,7 @@ const AppContent = () => {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          <img alt="Chat on WhatsApp" src="https://richi.com.ar/img/wa.webp" />
+          <img alt="Chat on WhatsApp" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png" />
         </a>
       </div>
     </>

@@ -27,18 +27,18 @@ function Contacto() {
           </div>
           <div className="contacto-content">
             <h3>Email</h3>
-            <p>dame@gmail.com</p>
+            <p>dameelectricidad.ventas@gmail.com</p>
             <span className="contacto-action">Enviar email</span>
           </div>
         </div>
 
-        <div className="contacto-card" onClick={() => window.open('https://wa.me/5491145678901', '_blank')}>
+        <div className="contacto-card" onClick={() => window.open('https://wa.me/5491130733557', '_blank')}>
           <div className="contacto-icon" style={{ color: '#25D366' }}>
             <i className="fa-brands fa-whatsapp"></i>
           </div>
           <div className="contacto-content">
             <h3>WhatsApp</h3>
-            <p>+54 9 11 4567-8901</p>
+            <p>+54 9 11 3073-3557</p>
             <span className="contacto-action">Enviar mensaje</span>
           </div>
         </div>
