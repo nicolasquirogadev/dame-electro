@@ -121,7 +121,7 @@ function Hero() {
       <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
       <img src={kalopLogo} alt="Kalop" />
       <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
-      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
+      <img src="https://bawelectric.com/assets/img/logo.svg" alt="Baw" />
       <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
       <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
       <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
@@ -134,7 +134,7 @@ function Hero() {
       <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
       <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
       <img src={trefilconImg} alt="Trefilcon" />
-      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
+      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/14/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
       <img src="" alt="" />
       <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
       <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
@@ -152,7 +152,7 @@ function Hero() {
       <img src="https://www.elibet.com/wp-content/uploads/2020/03/elibet.png" alt="Elibet" />
       <img src={kalopLogo} alt="Kalop" />
       <img src="https://ferrolux.com.ar/public/img/logo_ferrolux.png" alt="Ferrolux" />
-      <img src="https://bawelectric.com/assets/LOGO" alt="Baw" />
+      <img src="https://bawelectric.com/assets/img/logo.svg" alt="Baw" />
       <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
       <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
       <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
@@ -165,7 +165,7 @@ function Hero() {
       <img src="https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg" alt="Schneider" />
       <img src="https://sicaelec.vtexassets.com/arquivos/logo-header.png" alt="Sica" />
       <img src={trefilconImg} alt="Trefilcon" />
-      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
+      <img src="https://tecnocomonline.com.ar/wp-content/uploads/sites/14/2023/02/Logo-tecnocom-.png" alt="Tecnocom" />
       <img src="" alt="" />
       <img src="https://richi.com.ar/img/logo.svg" alt="Richi" />
       <img src="https://www.tbcin.com.ar/static/img/logos/tbcin-bg-transparent.png" alt="TBC" />
