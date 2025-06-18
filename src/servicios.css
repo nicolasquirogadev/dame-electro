@@ -130,51 +130,116 @@
 }
 
 /* Timeline de Proceso */
-.proceso-compra {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 800px;
-  margin: 4rem auto;
-  position: relative;
-  z-index: 1;
-}
-
-.proceso-compra::before {
-  content: "";
-  position: absolute;
-  top: 25px;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, 
-    transparent 10%, 
-    var(--azul-electrico) 50%, 
-    transparent 90%);
-  z-index: 1;
-}
-
-.paso {
-  text-align: center;
-  flex: 1;
-}
-
-.circulo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--azul-electrico);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  position: relative;
-  z-index: 2;
-  border: 3px solid var(--azul-medio);
-}
+.proceso-compra-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--azul-oscuro) 0%, #000913 100%);
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .proceso-titulo {
+    text-align: center;
+    color: var(--blanco);
+    margin-bottom: 2.5rem;
+    font-size: 2rem;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  .proceso-titulo:after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--amarillo-accento);
+    margin: 0.5rem auto 0;
+    box-shadow: 0 2px 4px rgba(255, 215, 0, 0.3);
+  }
+  
+  .proceso-compra {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  .proceso-compra:before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, 
+      rgba(0, 102, 255, 0.7), 
+      var(--amarillo-accento),
+      rgba(0, 102, 255, 0.7));
+    z-index: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .paso {
+    position: relative;
+    z-index: 2;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .circulo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--azul-electrico);
+    color: var(--blanco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 102, 255, 0.4);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    border: 2px solid var(--amarillo-accento);
+  }
+  
+  .paso:hover .circulo {
+    background: var(--amarillo-accento);
+    color: var(--azul-oscuro);
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+  }
+  
+  .contenido-paso {
+    text-align: center;
+    padding: 0 0.5rem;
+  }
+  
+  .titulo-paso {
+    color: var(--blanco);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  }
+  
+  .descripcion-paso {
+    color: var(--gris-claro);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  
+  .conector {
+    position: absolute;
+    top: 30px;
+    right: -50%;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 102, 255, 0.5);
+    z-index: -1;
+  }
 
 
 /* Sección de Pagos */
@@ -277,4 +342,32 @@
     width: 80px;
     text-align: center;
   }
+
+  .proceso-compra {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .paso {
+      width: 100%;
+      margin-bottom: 2rem;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+    }
+    
+    .contenido-paso {
+      text-align: left;
+      padding-left: 1rem;
+      flex: 1;
+    }
+    
+    .proceso-compra:before,
+    .conector {
+      display: none;
+    }
+    
+    .circulo {
+      margin-bottom: 0;
+    }
 }

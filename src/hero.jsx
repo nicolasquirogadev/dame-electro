@@ -49,7 +49,7 @@ function Hero() {
               <img src="https://www.bancoprovincia.com.ar/CDN/Get/logo_2021_S" alt="Banco Provincia" />
               <div className="promo-text">
                 <h1><span className="highlight">4 CUOTAS SIN INTERÉS</span></h1>
-                <p>+ 15% OFF en pagos con transferencia bancaria</p>
+                <p>+ 10% OFF en pagos con transferencia bancaria</p>
                 <div className="promo-details">
                   <span>✅ Todos los productos</span>
                   <span>✅ Sin costo adicional</span>
@@ -75,8 +75,8 @@ function Hero() {
       <SwiperSlide className="slide slide-promo">
         <div className="slide-content">
           <div className="promo-badge">MÁS VENDIDO</div>
-          <h1>Lámparas LED Macroled <span className="highlight">30% OFF</span></h1>
-          <p>Calidad profesional con garantía extendida de 3 años</p>
+          <h1>Lámparas LED Macroled <span className="highlight">10% OFF</span></h1>
+          <p>Oferta llevando paquete cerrado.</p>
           <div className="product-features">
             <span>✔ Ahorro energético</span>
             <span>✔ Instalación inmediata</span>
