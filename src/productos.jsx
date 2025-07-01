@@ -10,10 +10,9 @@ import macroledLogo from './assets/Macroled.logo.png';
 import kalopLogo from './assets/kalop-logo.png'
 
 //imagenes categorias 
-import iluminacionImg from './assets/lamparas.jpeg';
 import cat4Img from './assets/cat4ph.png';
 import cat6Img from './assets/cat6.png'
-import electricidadImg from './assets/inteck.jpeg';
+import termicasImg from './assets/termicas.jpg';
 
 // catalogos pdf
 import macroledCat4 from './assets/Macroled_cat4_artf_iluminacion_lamparas.pdf';
@@ -21,6 +20,8 @@ import macroledCat6 from './assets/macroled_cat6.pdf'
 import kalopCat3 from './assets/kalop_cat3.pdf';
 import kalopCat2 from './assets/kalop_cat2.pdf';
 import kalopCat6 from './assets/kalop_cat6.pdf';
+import chintCat1 from './assets/Chint Catalogo 2024.01.09.pdf';
+import schneCat1 from './assets/SchneiderCatalogo1.pdf';
 
 const Productos = () => {
   const { categoryId } = useParams();
@@ -42,7 +43,7 @@ const Productos = () => {
     {
       id: 1,
       nombre: 'Térmicas / Diferenciales / Equip. Eléctrico / Industria',
-      imagen: iluminacionImg,
+      imagen: termicasImg,
     },
     {
       id: 2,
@@ -79,37 +80,37 @@ const Productos = () => {
         id: 1,
         nombre: 'Sica',
         imagen: 'https://sicaelec.vtexassets.com/arquivos/logo-header.png',
-        link: 'https://sicaelec.com.ar/'
+        link: 'https://sicaelec.com/wp-content/uploads/catalogosPDF/SICA:Energia_e_Industria.pdf'
       },
       {
         id: 2,
         nombre: 'Chint',
         imagen: 'https://imgs.search.brave.com/Kv08z_BtZ-0_w3YKHtpUEfyFtMBNrPCuMwsea6ccsyc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly94bi0t/YW9zbHV6LXd3YS5j/b20uYXIvd3AtY29u/dGVudC91cGxvYWRz/LzIwMjEvMDYvY2hp/bnRFbGVjdHJpYy5q/cGc',
-        link: 'https://www.chintargentina.com.ar/'
+        link: chintCat1,
       },
       {
         id: 3,
         nombre: 'Schneider',
         imagen: 'https://www.se.com/ar/es/assets/v2/696/media/202250/SE_logo-LIO-white_header.svg',
-        link: 'https://www.se.com/ar/es/'
+        link: schneCat1,
       },
       {
         id: 4,
         nombre: 'ABB',
         imagen: 'https://global.abb/content/dam/abb-etc/commons/abb-logo.svg',
-        link: 'https://new.abb.com/ar'
+        link: 'https://library.e.abb.com/public/50e13e42653e4ae39d8301619a91742c/Catalogo%20Comercial%20ABB%20Peru%202021%20version%20movil.pdf'
       },
       {
         id: 5,
         nombre: 'Elibet',
         imagen: 'https://www.elibet.com/wp-content/uploads/2020/03/elibet.png',
-        link: 'https://www.elibet.com/'
+        link: null
       },
       {
         id: 6,
         nombre: 'Baw',
-        imagen: 'https://bawelectric.com/assets/LOGO',
-        link: 'https://bawelectric.com/'
+        imagen: 'https://bawelectric.com/assets/img/logo.svg',
+        link: null
       },
     ],
     
@@ -131,7 +132,7 @@ const Productos = () => {
         id: 3,
         nombre: 'Cabrera',
         imagen: 'https://cabrera.net.ar/wp-content/uploads/2024/11/logo-white.svg',
-        link: 'https://cabrera.net.ar/'
+        link: null
       },
       {
         id: 4,
@@ -149,13 +150,13 @@ const Productos = () => {
         id: 6,
         nombre: 'Prodem',
         imagen: 'https://bandejasprodem.com.ar/images/logo/logo-white.png',
-        link: 'https://bandejasprodem.com.ar/'
+        link: null
       },
       {
         id: 7,
         nombre: 'Tecnocom',
         imagen: 'https://tecnocomonline.com.ar/wp-content/uploads/sites/71/2023/02/Logo-tecnocom-.png',
-        link: 'https://tecnocomonline.com.ar/'
+        link: null
       },
       {
         id: 8,
@@ -171,7 +172,7 @@ const Productos = () => {
         id: 1,
         nombre: 'Trefilcom',
         imagen: trefilconImg,
-        link: 'https://trefilcon.com.ar/productos/'
+        link: null
       },
       {
         id: 2,
@@ -219,7 +220,7 @@ const Productos = () => {
         id: 2,
         nombre: 'Fischer',
         imagen: 'https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30',
-        link: 'https://www.fischer-group.com/es-AR'
+        link: null
       }
     ],
     // Llaves de luz / Porteros / Domicilios
@@ -228,13 +229,13 @@ const Productos = () => {
         id: 1,
         nombre: 'Comax',
         imagen: 'https://http2.mlstatic.com/storage/mshops-appearance-api/images/86/206072686/logo-2020041815021906700.png',
-        link: 'https://comax.com.ar/'
+        link: null
       },
       {
         id: 2,
         nombre: 'Richi',
         imagen: 'https://richi.com.ar/img/logo.svg',
-        link: 'https://richi.com.ar/'
+        link: null
       },
       {
         id: 3,

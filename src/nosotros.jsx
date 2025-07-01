@@ -1,10 +1,16 @@
 import './nosotros.css';
 import Footer from './Footer'
-import equipoImg from './assets/solar.jpeg'; 
 import obrasImg from './assets/inner-local-vert.jpg'; 
 import { Link } from 'react-router-dom';
 
 function Nosotros() {
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
 
     return (
         <>
@@ -71,12 +77,12 @@ function Nosotros() {
           <div className="aliados-text">
             <h2>Tu aliado estratégico</h2>
             <p>En DAME combinamos dos décadas de experiencia con el catálogo más completo de marcas líderes para ofrecerte soluciones eléctricas integrales.</p>
-            < Link to='/contacto' className='nosotros-cta'>
-            <button className="contacto-btn">Contactanos</button>
+            < Link to='/contacto' className='nosotros-cta' >
+            <button className="contacto-btn" onClick={scrollToTop}>Contactanos</button>
             </Link>
           </div>
           <div className="aliados-img">
-            <img src={obrasImg} alt="Trabajos eléctricos en obra" />
+            <img src={obrasImg} alt="Nuestro local" />
           </div>
         </div>
       </div>

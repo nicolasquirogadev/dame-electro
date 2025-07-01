@@ -26,21 +26,20 @@ section {
     background-size: cover;
     background-position: center ;
   }
-  .slide2 {
-    background-image: url(https://www.ecubo.net/wp-content/uploads/2020/07/Ecubo-instalaciones-LED.jpg);
-    background-size: cover;
-    background-position: center ;
-  }
+
+  
   .slide3 {
     background-image: url(https://dareelectricidad.com/wp-content/uploads/2024/11/LED-Iluminacion-Ventajas-y-Tipos-para-Tu-Hogar-y-Negocio.jpg);
     background-size: cover;
     background-position: center ;
   }
-  .slide4 {
-    background-image: url(https://www.electrodinamic.com/media/photos/video-quadres-electrics.jpg);
+ 
+  .slide-promo2 {
+    background-image: url(./assets/rollos-vert.jpg);
     background-size: cover;
     background-position: center ;
   }
+
   .swiper-slide::before {
     content: '';
     position: absolute;

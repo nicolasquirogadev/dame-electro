@@ -13,8 +13,9 @@ import './mediaqueries.css';
 import './hero.css';
 import trefilconImg from './assets/trefilcon.png';
 import piroloImg from './assets/pirolo.png';
-import kalopLogo from './assets/kalop-logo.png'
-import productImg from './assets/macroled/BT-55-7.jpeg'
+import kalopLogo from './assets/kalop-logo.png';
+
+
 
 function Hero() {
 
@@ -26,8 +27,12 @@ function Hero() {
 
         <Swiper
       className='swiper1'
-      modules={[Navigation, Pagination, ]}
-      /* autoplay= {{6000}} */ 
+      modules={[Navigation, Pagination, Autoplay ]}
+      autoplay={{
+        delay: 3000, // 3 segundos entre slides
+        disableOnInteraction: true, // sigue autoplay después de interacción del usuario
+        pauseOnMouseEnter: true // pausa cuando el mouse está sobre el slider
+      }}
       navigation
       pagination={{ clickable: true }}
     >
@@ -43,7 +48,7 @@ function Hero() {
 
       </SwiperSlide>
 
-      <SwiperSlide className="slide slide-financiacion">
+      {/* <SwiperSlide className="slide slide-financiacion">
           <div className="slide-content">
             <div className="bank-promo">
               <img src="https://www.bancoprovincia.com.ar/CDN/Get/logo_2021_S" alt="Banco Provincia" />
@@ -60,7 +65,7 @@ function Hero() {
             <button className="cta-button">Ver condiciones</button>
             </Link>
           </div>
-        </SwiperSlide>
+        </SwiperSlide>*/}
       
       <SwiperSlide className='slide3'>
         <div className="slide-content">
@@ -82,17 +87,32 @@ function Hero() {
             <span>✔ Instalación inmediata</span>
             <span>✔ Stock permanente</span>
           </div>
-          < Link to='/productos' className='swiper-cta'>
-          <button className="cta-button">Ver oferta</button>
+          < Link to='/productos/4' className='swiper-cta'>
+          <button className="cta-button">Ver productos</button>
           </Link>
         </div>
-        <div className="product-image">
-          <img src={productImg} alt="Lámpara LED Macroled" />
+        
+      </SwiperSlide>
+
+      <SwiperSlide className="slide slide-promo2">
+        <div className="slide-content">
+          <div className="promo-badge">OFERTA ESPECIAL</div>
+          <h1>Cable conductor eléctrico <span className="highlight">10% OFF</span></h1>
+          <p>Oferta válida llevando paquete cerrado con cualquier medio de pago.</p>
+          <div className="product-features">
+            <span>✔ Calibre 12 AWG y 14 AWG</span>
+            <span>✔ 600V - 90°C</span>
+            <span>✔ Stock disponible en varios colores</span>
+          </div>
+          < Link to='/productos/3' className='swiper-cta'>
+          <button className="cta-button">Ver productos</button>
+          </Link>
         </div>
+        
       </SwiperSlide>
 
 
-      <SwiperSlide className="slide slide-kit">
+      {/* <SwiperSlide className="slide slide-kit">
           <div className="slide-content">
             <h1>Kit Electricista <span className="highlight">Premium</span></h1>
             <p className="kit-includes">Incluye: Cables Trefilcon + Termicas Chint + Herramientas Jadever</p>
@@ -107,7 +127,7 @@ function Hero() {
             <button className="cta-button">Comprar ahora</button>
             </Link>
           </div>
-        </SwiperSlide>
+        </SwiperSlide>  */}
 
     </Swiper>
 
@@ -124,7 +144,7 @@ function Hero() {
       <img src="https://bawelectric.com/assets/img/logo.svg" alt="Baw" />
       <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
       <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
-      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
+      <img src="https://ltcar.com.ar/assets/img/insumos/Genrod-Logo.png" alt="Genrod" />
       <img src="" alt="" />
       <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
       <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
@@ -155,7 +175,7 @@ function Hero() {
       <img src="https://bawelectric.com/assets/img/logo.svg" alt="Baw" />
       <img src="https://media.fischer.group/v7/_media-prod_/national/samples/logos/fischer-logo-s-pos-rgb.png?func=bound&w=194&h=30" alt="Fischer" />
       <img src="https://www.forli.com.ar/wp-content/uploads/2017/02/logo-blanco3.png" alt="Forli" />
-      <img src="https://genrod.com.ar/img/logo-genrod-footer-tagline.svg" alt="Genrod" />
+      <img src="https://ltcar.com.ar/assets/img/insumos/Genrod-Logo.png" alt="Genrod" />
       <img src="" alt="" />
       <img src="https://herramientasjadever.cl/cdn/shop/files/LOGO_JADEVER_1.png?v=1727963455&width=170" alt="Jadever" />
       <img src="https://jeluz.net/cdn/shop/files/jeluz-logo-header_500x.png?v=1668704909" alt="Jeluz" />
