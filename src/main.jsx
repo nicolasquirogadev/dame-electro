@@ -114,9 +114,9 @@ const AppContent = () => {
 const App = () => {
   return (
     <StrictMode>
-      <Router basename="/dame-electro">
+      <BrowserRouter basename="/">
         <AppContent />
-      </Router>
+      </BrowserRouter>
     </StrictMode>
   );
 };
