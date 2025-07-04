@@ -1,6 +1,6 @@
 import { StrictMode, useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
 import './index.css';
 import './nav.css';
 import './mediaqueries.css';
@@ -114,9 +114,9 @@ const AppContent = () => {
 const App = () => {
   return (
     <StrictMode>
-      <BrowserRouter basename="/">
+      <Router basename="/">
         <AppContent />
-      </BrowserRouter>
+      </Router>
     </StrictMode>
   );
 };
